@@ -1,35 +1,52 @@
-# Import modules
+
+# * Import modules
+import gspread  # for manipulating google sheets https://gspread.readthedocs.io/en/latest/index.html
+import math
 import os
+import string
 import seaborn as sns
 import numpy as np
-import gspread  # https://gspread.readthedocs.io/en/latest/index.html
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
-import math
-import string
 from matplotlib import style
 from oauth2client.service_account import ServiceAccountCredentials
 from time import time
 from pathlib import Path
+# %matplotlib inline #  for jupyter notebook
 
-# [+] check for whether homegame, if homegame we wanna evauluate money
-# [+] add preflop raise
+# TODO: check for whether homegame, if homegame we wanna evauluate money
+# TODO: add preflop raises
+# TODO: add family pot percentage (counter)
+# TODO: Clean up the code
+# ? Possible to implement add rebuys of known players when they change accounts to buy in again
 
-# Get the most recently created data file
-dirpath = "C:\\Users\\Michl\\Desktop\\HandHistory\\DukeCroix\\"
-paths = sorted(Path(dirpath).iterdir(), key=os.path.getmtime)
+# Define some paths and get the most recent hand history file
+handpath = "C:\\Users\\Michl\\AppData\\Local\\PokerStars.EU\\HandHistory\\"
+paths = sorted(Path(handpath).iterdir(), key=os.path.getmtime)
 filename = paths[-1]
-# filename = dirpath+""+".txt"
+try:
+    os.mkdir('C:Users\\Michl\\Desktop\\poker_session\\')
+except OSError:
+    pass
+finally:
+    savedir = 'C:\\Users\\Michl\\Desktop\\poker_session\\'
+# Some basic parameters
 chipCount_start = 10000
 bigBlind = 100
-
-# Get some raw input
 date = input("What's the date?   -  ")
 
-# Functions
+# * Functions
 
 
 def timer(func):
+    """Decorater/Wrapper function to measure elapsed time of input function
+
+    Parameters
+    ----------
+    func : function
+        to be wrapped function
+    """
+
     def f(*args, **kwargs):
         before = time()
         rv = func(*args, **kwargs)
@@ -40,23 +57,46 @@ def timer(func):
 
 
 def extractData(rawlines):
-    countChips, countWins, countHand, countRake, potSize, countAllIn = [
+    """Extracts relevant data from hand history file (.txt)
+
+    Parameters
+    ----------
+    rawlines : list of lists
+        Contains the content of hand history file as a list of lists
+
+    Returns
+    -------
+    each_chips : dict
+        For each player name (dict key) list of two lists for each hand played: chip count, corresponding hand number
+    each_wins : dict
+        For each player name (dict key) list of four lists of 0/1 for each hand played: won w/ showdown, lost w/ or w/o showdown, won w/o showdown, preflop fold
+    count_hand : dict
+        Counter for overall hands played
+    each_rake : dict
+        List of values for rake per hand
+    each_potsize : dict
+        List of values for pot size per hand
+    each_allin : dict
+        For each player name (dict key) list of four lists of 0/1 for each hand played: all-in, all-in won, bust, rebuy
+    """
+
+    each_chips, each_wins, count_hand, each_rake, each_potsize, countAllIn = [
         {}, {}, [0], [.01e-20], [.01e-20], {}]
     for line in rawlines:
         words = line.split()
         if len(words) > 4 and words[0] not in ['***', 'Board', 'Table']:
             # Hand count
             if words[-1] == "ET":
-                countHand.append(countHand[-1]+1)
+                count_hand.append(count_hand[-1]+1)
             # Chip count
             elif words[-1] == "chips)":
                 chips = int(words[-3][1:])
-                if words[2] in countChips.keys():
-                    countChips[words[2]][0].append(chips)
-                    countChips[words[2]][1].append(countHand[-1])
+                if words[2] in each_chips.keys():
+                    each_chips[words[2]][0].append(chips)
+                    each_chips[words[2]][1].append(count_hand[-1])
                 else:
-                    countChips[words[2]] = [
-                        [chipCount_start, chips], [0, countHand[-1]]]
+                    each_chips[words[2]] = [
+                        [chipCount_start, chips], [0, count_hand[-1]]]
                 # Update all-ins
                 if words[2] in countAllIn.keys():
                     [item.append(0) for item in countAllIn[words[2]]]
@@ -66,10 +106,10 @@ def extractData(rawlines):
                 else:
                     countAllIn[words[2]] = [[0, 0], [0, 0], [0, 0], [0, 0]]
                 # Update wins
-                if words[2] in countWins.keys():
-                    [item.append(0) for item in countWins[words[2]]]
+                if words[2] in each_wins.keys():
+                    [item.append(0) for item in each_wins[words[2]]]
                 else:
-                    countWins[words[2]] = [[0, 0], [0, 0], [0, 0], [0, 0]]
+                    each_wins[words[2]] = [[0, 0], [0, 0], [0, 0], [0, 0]]
             # All-In
             elif words[-1] == "all-in":
                 # strip the semicolon from the name
@@ -78,19 +118,19 @@ def extractData(rawlines):
                 countAllIn[words_stripped][0][-1] = 1
             # Win w/ showdown count
             elif "won" in words:
-                countWins[words[2]][0][-1] = 1
+                each_wins[words[2]][0][-1] = 1
                 # if all-in and won
                 if countAllIn[words[2]][0][-1] == 1:
                     countAllIn[words[2]][1][-1] = 1
             # Lost count
             elif "lost" in words or "mucked" in words:
-                countWins[words[2]][1][-1] = 1
+                each_wins[words[2]][1][-1] = 1
                 # if all-in and lost/mucked, player went bust
                 if countAllIn[words[2]][0][-1] == 1:
                     countAllIn[words[2]][2][-1] = 1
             # Won w/o showdown count
             elif words[-2] == "collected":
-                countWins[words[2]][2][-1] = 1
+                each_wins[words[2]][2][-1] = 1
                 # if all-in and won
                 if countAllIn[words[2]][0][-1] == 1:
                     countAllIn[words[2]][1][-1] = 1
@@ -98,19 +138,27 @@ def extractData(rawlines):
             elif words[1] == "pot":
                 # Rake
                 if int(words[-1]) == 0:
-                    countRake.append(.01e-20)
+                    each_rake.append(.01e-20)
                 else:
-                    countRake.append(float(words[-1]))
+                    each_rake.append(float(words[-1]))
                 # Pot
-                potSize.append(float(words[2]))
+                each_potsize.append(float(words[2]))
             # Preflop fold
             elif "before" in words:
-                countWins[words[2]][3][-1] = 1
+                each_wins[words[2]][3][-1] = 1
 
-    return countHand, countChips, countWins, countRake, potSize, countAllIn
+    return count_hand, each_chips, each_wins, each_rake, each_potsize, countAllIn
 
 
 def getData():
+    """Function that opens the hand history file and calls extract data function
+
+    Returns
+    -------
+    list of lists
+        contains all information returned by extractData()
+    """
+
     with open(filename) as raw_file:
         raw_content = raw_file.readlines()
         content = [x.strip() for x in raw_content]
@@ -129,15 +177,23 @@ ax1 = plt.subplot2grid((6, 6), (0, 0), rowspan=4, colspan=6, fig=fig)
 ax3 = plt.subplot2grid((6, 6), (4, 0), rowspan=2, colspan=3, fig=fig)
 ax4 = plt.subplot2grid((6, 6), (4, 3), rowspan=2, colspan=3, fig=fig)
 #ax2 = plt.subplot2grid((6, 6), (4, 0), rowspan=2, colspan=1, fig=fig)
+ax1sec = ax1.twinx()
 #ax2sec = ax2.twinx()
 ax3sec = ax3.twinx()
 
 
 @timer
 def update(interval):
+    """Function to draw the data read out of hand history in real time
+
+    Parameters
+    ----------
+    interval : int
+        interval necessary to run animation
+    """
+
     ax1.clear()
-    #ax2.clear()
-    #ax2sec.clear()
+    ax1sec.clear()
     ax3.clear()
     ax3sec.clear()
     ax4.clear()
@@ -145,7 +201,7 @@ def update(interval):
     busted = {}
     # Chip count
     for c in finalCounts[1]:
-        ax1.plot(finalCounts[1][c][1], finalCounts[1][c][0], label=c)
+        ax1.plot(finalCounts[1][c][1], finalCounts[1][c][0], label=c,  lw=2.5)
         # Draw a vertical line for each bust
         wentBust = [i for i, e in enumerate(finalCounts[5][c][2]) if e == 1]
         wentBust = [finalCounts[1][c][1][i] for i in wentBust]
@@ -160,22 +216,29 @@ def update(interval):
                     dashes=[6, 4], dash_capstyle="round")
         ax1.annotate("{0}\nwent bust !".format(str(busted[k]).translate(
             {ord(i): None for i in "[]'"})), xy=(
-            k, 0), fontsize=10.5, fontstyle="normal", annotation_clip=False, rotation=-45, ha="right", color="black")
+            k, max([max(item[0]) for item in list(finalCounts[1].values())])*(12/14)), fontsize=10.5, fontstyle="normal", annotation_clip=False, rotation=33, ha="right", color="black")
+    ax1sec.fill_between(finalCounts[0], 0, finalCounts[4], facecolor="black", alpha=0.15)
+    ax1sec.set_ylim(ymin=0, ymax=max(
+        [max(item[0]) for item in list(finalCounts[1].values())])+bigBlind)
+    ax1sec.axes.yaxis.set_ticklabels([])
+    ax1sec.grid(False)
     # Make pretty
-    ax1.legend(loc="upper left", prop={'size': 14})
+    ax1.legend(loc="upper left", prop={'size': 14}, frameon=1)
     ax1.yaxis.set_label_position("right")
     ax1.yaxis.tick_right()
-    ax1.set_ylabel('Chip count', fontsize=18)
-    ax1.set_xlabel("Hand #", fontsize=18)
+    ax1.set_ylabel('Chip count', fontsize=17)
+    ax1.set_xlabel("Hand #", fontsize=17)
     ax1.set_xlim(xmin=0, xmax=max(finalCounts[0]))
-    ax1.set_ylim(ymin=0)
+    ax1.set_ylim(ymin=0, ymax=max(
+        [max(item[0]) for item in list(finalCounts[1].values())])+bigBlind)
     ax1.tick_params(axis='x', labelsize=15)
     ax1.tick_params(axis='y', labelsize=15)
     ax1.axhline(chipCount_start, color="black", lw=1.5,
                 dashes=[6, 4], dash_capstyle="round")
     ax1.set_title("- Chip count at hand #{0} ({1}/{2} game) -".format(
-        max(finalCounts[0]), int(bigBlind/2), bigBlind), fontsize=18, fontweight="bold")
+        max(finalCounts[0]), int(bigBlind/2), bigBlind), fontsize=17, fontweight="bold")
     ax1.grid(True, which="major")
+    # ax1.yaxis.set_major_locator(plt.MaxNLocator(8))
 
     # Rake and pot size
     # # For percentage rake
@@ -209,19 +272,19 @@ def update(interval):
     allPreflopFolds = [sum(item[3]) for item in list(finalCounts[2].values())]
     allTrials = [len(item[3]) for item in list(finalCounts[2].values())]
     percentagePreflopFold = [a/b for a, b in zip(allPreflopFolds, allTrials)]
-    width = .2
+    width = .15
     x = np.arange(len(list(finalCounts[2].keys())))
-    ax3.bar(x-width-width/2, [sum(item[0]) for item in list(finalCounts[2].values())],
-            width, label="Wins w/ showdown", color="g", hatch="")
-    ax3.bar(x-width/2, [sum(item[2]) for item in list(finalCounts[2].values())],
-            width, label="Wins w/o showdown", color="yellowgreen", hatch="")
-    ax3.bar(x+width/2, [sum(item[1]) for item in list(finalCounts[2].values())],
-            width, label="Losses", color="r", hatch="")
-    ax3sec.bar(x+width+width/2, percentagePreflopFold,
-               width, label="Preflop fold", color="dimgray", hatch="")
+    first1 = ax3.bar(x-width-width/2, [sum(item[0]) for item in list(finalCounts[2].values())],
+                     width, label="Wins w/ showdown", color="g", hatch="")
+    first2 = ax3.bar(x-width/2, [sum(item[2]) for item in list(finalCounts[2].values())],
+                     width, label="Wins w/o showdown", color="yellowgreen", hatch="")
+    first3 = ax3.bar(x+width/2, [sum(item[1]) for item in list(finalCounts[2].values())],
+                     width, label="Losses", color="r", hatch="")
+    second = ax3sec.bar(x+width+width/2, percentagePreflopFold, width,
+                        label="Preflop fold", color="dimgray", hatch="")
     # Make pretty
-    ax3.legend(loc="upper center", prop={'size': 10})
-    # ax3.legend()
+    ax3.legend([first1, first2, first3, second], ["Wins w/ showdown", "Wins w/o showdown",
+                                                  "Losses", "Preflop fold"], loc="upper left", prop={'size': 10}, frameon=True)
     ax3.yaxis.set_label_position("left")
     ax3.yaxis.tick_left()
     ax3.set_ylabel('Count', fontsize=15)
@@ -236,18 +299,19 @@ def update(interval):
     ax3.tick_params(axis='y', labelsize=12)
     ax3.set_title("- Wins, losses and preflop folds -",
                   fontsize=16, fontweight="bold")
-    ax3sec.grid(False)
+    ax3.yaxis.set_major_locator(plt.MaxNLocator(8))
     ax3sec.set_ylabel('Percentage', fontsize=15)
-    ax3sec.set_yticks(
-        [x * ((100/5)/100) for x in range(0, 8)])
+    #ax3sec.set_yticks(
+    #    [x * ((100/5)/100) for x in range(0, 8)])
     ax3sec.set_ylim(ymin=0, ymax=.8)
     ax3sec.tick_params(axis='y', labelsize=11)
-    ax3sec.legend(loc='upper right', prop={'size': 10})
+    ax3sec.yaxis.set_major_locator(plt.MaxNLocator(8))
+    ax3.grid(True, which="major")
 
     # All-in win & loss, rebuys
-    width = .2
-    ax4.bar(x-width, [sum(item[3])
-                      for item in list(finalCounts[5].values())], width, label="Re-buys", color="black", hatch="")
+    width = .15
+    ax4.bar(x-width, [sum(item[3]) for item in list(finalCounts[5].values())],
+            width, label="Re-buys", color="black", hatch="")
     ax4.bar(x, [sum(item[1]) for item in list(finalCounts[5].values())],
             width, label="All-ins won", color="g", hatch="")
     ax4.bar(x+width, [sum(item[2]) for item in list(finalCounts[5].values())],
@@ -268,8 +332,10 @@ def update(interval):
     ax4.tick_params(axis='y', labelsize=12)
     ax4.set_title("- All-in wins, losses and rebuys -",
                   fontsize=16, fontweight="bold")
+    ax4.grid(True, which="major")
+    # ax4.yaxis.set_major_locator(plt.MaxNLocator(8))
 
-    sns.despine()
+    # sns.despine()
     plt.tight_layout()
     print("updated")
 
@@ -277,13 +343,12 @@ def update(interval):
 # Show graph
 ani = animation.FuncAnimation(fig, update, interval=5000)
 plt.show()
+fig.savefig(savedir+"PokerOn_{}.svg".format(date), bbox_inched='tight')
 
 # Save?
 saveSession = input("Do you wanna save & upload (y/n)?   -  ")
 
 if saveSession == 'y':
-    fig.savefig("C:\\Users\\Michl\\Desktop\\HandHistory\\PokerOn_{0}.svg".format(
-        date), bbox_inched='tight')
     scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
              "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
 
@@ -316,11 +381,11 @@ if saveSession == 'y':
         81, len(current_worksheet.row_values(81))+1, date)
     for i in range(12):
         current_worksheet.update_cell(
-            6+i, len(current_worksheet.row_values(5)), "='{0}'!G{1}".format(date, 9+i))
+            6+i, len(current_worksheet.row_values(5)), "='{}'!G{}".format(date, 9+i))
         current_worksheet.update_cell(
             64+i,  len(current_worksheet.row_values(63)), "=SUM($E${0}:{1}{0})".format(6+i, string.ascii_lowercase[len(current_worksheet.row_values(5))-1]))
         current_worksheet.update_cell(
-            82+i,  len(current_worksheet.row_values(81)), "={0}{1}".format(string.ascii_lowercase[len(current_worksheet.row_values(5))-1], 6+i))
+            82+i,  len(current_worksheet.row_values(81)), "={}{}".format(string.ascii_lowercase[len(current_worksheet.row_values(5))-1], 6+i))
 
     # Create new session sheet
     current_worksheet = spreadsheet.get_worksheet(-1)
@@ -336,11 +401,11 @@ if saveSession == 'y':
                 # Look up buy-ins
                 if "buyinCount" in locals() or "buyinCount" in globals():
                     skip = input(
-                        "{0} already has an entry other than {1} with {2} buy-ins. If you want to add counts enter 'add'  :  ".format(currentName, name, buyinCount))
+                        "{} already has an entry other than {} with {} buy-ins. If you want to add counts enter 'add'  :  ".format(currentName, name, buyinCount))
                     old_buyinCount = int(buyinCount)
                 buyinCount = sum(finalCounts[5][name][3])+1
                 savedInput = input(
-                    "Found {0} as {1} with {2} buy-ins. Correct? (y/correction)  :  ".format(currentName, name, buyinCount))
+                    "Found {} as {} with {} buy-ins. Correct? (y/correction)  :  ".format(currentName, name, buyinCount))
                 if savedInput != "y":
                     buyinCount = int(savedInput)
                 try:
@@ -352,32 +417,32 @@ if saveSession == 'y':
                 # Look up chip count
                 if "chipCount" in locals() or "chipCount" in globals():
                     skip = input(
-                        "{0} already has an entry as {1} with {2} chips and {3} buy-ins. Skip? (y/n)  :  ".format(currentName, name, chipCount, buyinCount))
+                        "{} already has an entry as {} with {} chips and {} buy-ins. Skip? (y/n)  :  ".format(currentName, name, chipCount, buyinCount))
                     if skip != "n":
                         continue
                 chipCount = finalCounts[1][name][0][-1]
                 savedInput = input(
-                    "Found {0} as {1} with {2} chips. Correct? (y/correction)  :  ".format(currentName, name, chipCount))
+                    "Found {} as {} with {} chips. Correct? (y/correction)  :  ".format(currentName, name, chipCount))
                 if savedInput != "y":
                     chipCount = int(savedInput)
 
         if "chipCount" in locals() or "chipCount" in globals():
             savedInput = input(
-                "Save {0} with {1} chips and {2} buy-ins. Correct? (y/n)  :  ".format(currentName, chipCount, buyinCount))
+                "Save {} with {} chips and {} buy-ins. Correct? (y/n)  :  ".format(currentName, chipCount, buyinCount))
             if savedInput != "y":
                 f_chipCount = int(input(
-                    "The chip count of {0} ({1}) should be  :  ".format(currentName, chipCount)))
+                    "The chip count of {} ({}) should be  :  ".format(currentName, chipCount)))
                 f_buyinCount = int(input(
-                    "The buy-ins count of {0} ({1}) should be  :  ".format(currentName, buyinCount)))
+                    "The buy-ins count of {} ({}) should be  :  ".format(currentName, buyinCount)))
             f_chipCount, f_buyinCount = chipCount, buyinCount
         else:
             f_chipCount, f_buyinCount = 0, 0
 
         # Update the worksheet
         current_worksheet.update_acell(
-            "F{0}".format(9+i), "='"+"{0}".format(old_date)+"'"+"!H{0}".format(9+i))
-        current_worksheet.update_acell("B{0}".format(9+i), f_buyinCount)
-        current_worksheet.update_acell("D{0}".format(9+i), f_chipCount)
+            "F{}".format(9+i), "='"+"{}".format(old_date)+"'"+"!H{}".format(9+i)) # gspread has trouble interpreting ' in a full string hence the fragmentation
+        current_worksheet.update_acell("B{}".format(9+i), f_buyinCount)
+        current_worksheet.update_acell("D{}".format(9+i), f_chipCount)
         try:
             del chipCount, buyinCount
         except:
