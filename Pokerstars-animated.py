@@ -25,9 +25,9 @@ handpath = "C:\\Users\\Michl\\AppData\\Local\\PokerStars.EU\\HandHistory\\"
 paths = sorted(Path(handpath).iterdir(), key=os.path.getmtime)
 filename = paths[-1]
 try:
-    os.mkdir('C:Users\\Michl\\Desktop\\poker_session\\')
+    os.makedirs('C:\\Users\\Michl\\Desktop\\poker_session\\')
 except OSError:
-    pass
+    print("Folders already exist. Skipped!")
 finally:
     savedir = 'C:\\Users\\Michl\\Desktop\\poker_session\\'
 # Some basic parameters
@@ -217,7 +217,8 @@ def update(interval):
         ax1.annotate("{0}\nwent bust !".format(str(busted[k]).translate(
             {ord(i): None for i in "[]'"})), xy=(
             k, max([max(item[0]) for item in list(finalCounts[1].values())])*(12/14)), fontsize=10.5, fontstyle="normal", annotation_clip=False, rotation=33, ha="right", color="black")
-    ax1sec.fill_between(finalCounts[0], 0, finalCounts[4], facecolor="black", alpha=0.15)
+    ax1sec.fill_between(
+        finalCounts[0], 0, finalCounts[4], facecolor="black", alpha=0.15)
     ax1sec.set_ylim(ymin=0, ymax=max(
         [max(item[0]) for item in list(finalCounts[1].values())])+bigBlind)
     ax1sec.axes.yaxis.set_ticklabels([])
@@ -301,7 +302,7 @@ def update(interval):
                   fontsize=16, fontweight="bold")
     ax3.yaxis.set_major_locator(plt.MaxNLocator(8))
     ax3sec.set_ylabel('Percentage', fontsize=15)
-    #ax3sec.set_yticks(
+    # ax3sec.set_yticks(
     #    [x * ((100/5)/100) for x in range(0, 8)])
     ax3sec.set_ylim(ymin=0, ymax=.8)
     ax3sec.tick_params(axis='y', labelsize=11)
@@ -440,7 +441,7 @@ if saveSession == 'y':
 
         # Update the worksheet
         current_worksheet.update_acell(
-            "F{}".format(9+i), "='"+"{}".format(old_date)+"'"+"!H{}".format(9+i)) # gspread has trouble interpreting ' in a full string hence the fragmentation
+            "F{}".format(9+i), "='"+"{}".format(old_date)+"'"+"!H{}".format(9+i))  # gspread has trouble interpreting ' in a full string hence the fragmentation
         current_worksheet.update_acell("B{}".format(9+i), f_buyinCount)
         current_worksheet.update_acell("D{}".format(9+i), f_chipCount)
         try:
