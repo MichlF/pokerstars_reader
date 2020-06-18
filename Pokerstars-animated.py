@@ -33,6 +33,12 @@ finally:
 # Some basic parameters
 chipCount_start = 10000
 bigBlind = 100
+name_index = {"Benchi": ["BenchiWang", "MaFak2019", "Mafak2020"], "Dirk": ["JeBoyDirk"], "Ilja": ["Jackall23", "FragileMemory"], "Jan": ["color_singleton"], "Joshua": ["MrOB1reader", "Klemtonius"], "Manon": [
+    "Manon541", "Manon947"], "Michel": ["Duke"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"]}
+starti_players = 5
+starti_graph1 = 63
+starti_graph2 = 81
+
 date = input("What's the date?   -  ")
 
 # * Functions
@@ -112,9 +118,8 @@ def extractData(rawlines):
                     each_wins[words[2]] = [[0, 0], [0, 0], [0, 0], [0, 0]]
             # All-In
             elif words[-1] == "all-in":
-                # strip the semicolon from the name
                 words_stripped = words[0].translate(
-                    {ord(i): None for i in ':'})
+                    {ord(i): None for i in ':'})  # strip the semicolon from the name
                 countAllIn[words_stripped][0][-1] = 1
             # Win w/ showdown count
             elif "won" in words:
@@ -311,12 +316,12 @@ def update(interval):
     print("updated")
 
 
-# Show graph
+# * Actually start the showing the graph
 ani = animation.FuncAnimation(fig, update, interval=5000)
 plt.show()
 fig.savefig(savedir+"PokerOn_{}.svg".format(date), bbox_inched='tight')
 
-# Save?
+# * Save to Google sheets?
 saveSession = input("Do you wanna save & upload (y/n)?   -  ")
 
 if saveSession == 'y':
@@ -328,9 +333,7 @@ if saveSession == 'y':
 
     # To succesfully be authorized, share the spreadsheet on the google account with the email define in the credential.json file.
     client = gspread.authorize(creds)
-
     spreadsheet = client.open("lockdown-poker")  # Open the spreadsheet
-
     finalCounts = getData()
 
     # Create new session sheet
@@ -342,31 +345,28 @@ if saveSession == 'y':
     # Update overall sheet
     current_worksheet = spreadsheet.get_worksheet(0)
     old_date = current_worksheet.cell(
-        5, len(current_worksheet.row_values(5))).value  # save old date for later
+        starti_players, len(current_worksheet.row_values(starti_players))).value  # save old date for later
 
     current_worksheet.update_cell(
-        5, len(current_worksheet.row_values(5))+1, date)
+        starti_players, len(current_worksheet.row_values(starti_players))+1, date)
     current_worksheet.update_cell(
-        63, len(current_worksheet.row_values(63))+1, date)
+        starti_graph1, len(current_worksheet.row_values(starti_graph1))+1, date)
     current_worksheet.update_cell(
-        81, len(current_worksheet.row_values(81))+1, date)
-    for i in range(12):
+        starti_graph2, len(current_worksheet.row_values(starti_graph2))+1, date)
+    for i in range(len(name_index)):
         current_worksheet.update_cell(
-            6+i, len(current_worksheet.row_values(5)), "='{}'!G{}".format(date, 9+i))
+            starti_players+1+i, len(current_worksheet.row_values(starti_players)), "='{}'!G{}".format(date, 9+i))
         current_worksheet.update_cell(
-            64+i,  len(current_worksheet.row_values(63)), "=SUM($E${0}:{1}{0})".format(6+i, string.ascii_lowercase[len(current_worksheet.row_values(5))-1]))
+            starti_graph1+1+i,  len(current_worksheet.row_values(starti_graph1)), "=SUM($E${0}:{1}{0})".format(6+i, string.ascii_lowercase[len(current_worksheet.row_values(5))-1]))
         current_worksheet.update_cell(
-            82+i,  len(current_worksheet.row_values(81)), "={}{}".format(string.ascii_lowercase[len(current_worksheet.row_values(5))-1], 6+i))
+            starti_graph2+1+i,  len(current_worksheet.row_values(starti_graph2)), "={}{}".format(string.ascii_lowercase[len(current_worksheet.row_values(5))-1], 6+i))
 
     # Create new session sheet
     current_worksheet = spreadsheet.get_worksheet(-1)
 
-    nameIndex = {"Benchi": ["BenchiWang", "MaFak2019", "Mafak2020"], "Dirk": ["JeBoyDirk"], "Ilja": ["Jackall23", "FragileMemory"], "Jan": ["color_singleton"], "Joshua": ["MrOB1reader", "Klemtonius"], "Manon": [
-        "Manon541", "Manon947"], "Michel": ["Duke"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"]}
-
-    for i in range(12):
+    for i in range(len(name_index)):
         currentName = current_worksheet.get("A"+str(9+i))[0][0]
-        for name in nameIndex[currentName]:
+        for name in name_index[currentName]:
             if name in finalCounts[1]:
                 print("\n---\n")
                 # Look up buy-ins
@@ -414,6 +414,7 @@ if saveSession == 'y':
             "F{}".format(9+i), "='"+"{}".format(old_date)+"'"+"!H{}".format(9+i))  # gspread has trouble interpreting ' in a full string hence the fragmentation
         current_worksheet.update_acell("B{}".format(9+i), f_buyinCount)
         current_worksheet.update_acell("D{}".format(9+i), f_chipCount)
+        # Attempt clean-up
         try:
             del chipCount, buyinCount
         except:
