@@ -174,12 +174,10 @@ style.use("seaborn-dark")
 # style.use("ggplot")
 fig = plt.figure(figsize=[19, 10])
 ax1 = plt.subplot2grid((6, 6), (0, 0), rowspan=4, colspan=6, fig=fig)
-ax3 = plt.subplot2grid((6, 6), (4, 0), rowspan=2, colspan=3, fig=fig)
-ax4 = plt.subplot2grid((6, 6), (4, 3), rowspan=2, colspan=3, fig=fig)
-#ax2 = plt.subplot2grid((6, 6), (4, 0), rowspan=2, colspan=1, fig=fig)
+ax2 = plt.subplot2grid((6, 6), (4, 0), rowspan=2, colspan=3, fig=fig)
+ax3 = plt.subplot2grid((6, 6), (4, 3), rowspan=2, colspan=3, fig=fig)
 ax1sec = ax1.twinx()
-#ax2sec = ax2.twinx()
-ax3sec = ax3.twinx()
+ax2sec = ax2.twinx()
 
 
 @timer
@@ -194,9 +192,9 @@ def update(interval):
 
     ax1.clear()
     ax1sec.clear()
+    ax2.clear()
+    ax2sec.clear()
     ax3.clear()
-    ax3sec.clear()
-    ax4.clear()
     finalCounts = getData()
     busted = {}
     # Chip count
@@ -241,100 +239,72 @@ def update(interval):
     ax1.grid(True, which="major")
     # ax1.yaxis.set_major_locator(plt.MaxNLocator(8))
 
-    # Rake and pot size
-    # # For percentage rake
-    # totalPot = [a+b for a, b in zip(finalCounts[3], finalCounts[4])]
-    # percentageRake = [a/b for a, b in zip(finalCounts[3], totalPot)]
-    # percentageRake[0] = 0
-    # ax2.plot(percentageRake, label="Percentage rake", color="y")
-    # ax2sec.plot(finalCounts[4], label="Pot size", color="b")
-    # # Make pretty
-    # ax2.set_ylabel("Percentage rake", fontsize=16)
-    # ax2.set_ylim(ymin=0, ymax=.25)
-    # ax2.set_yticks(
-    #     [x * ((25/5)/100) for x in range(0, 6)])
-    # ax2.tick_params(axis='x', labelsize=14)
-    # ax2.tick_params(axis='y', labelsize=11)
-    # ax2.legend(loc="upper left", prop={'size': 11})
-    # ax2sec.set_xlabel("Hand count", fontsize=15)
-    # max_ylim = int(math.ceil(int(max(finalCounts[4]))/100) * 100)
-    # ax2sec.set_yticks(
-    #     range(0, max_ylim, int(max_ylim/6)))
-    # ax2sec.set_ylim(ymin=0, ymax=max_ylim+bigBlind)
-    # ax2sec.set_xlim(xmin=0, xmax=max(finalCounts[0]))
-    # ax2sec.tick_params(axis='y', labelsize=11)
-    # ax2sec.set_title("- Rake and pot size -", fontsize=16, fontweight="bold")
-    # ax2sec.grid(False)
-    # ax2sec.set_ylabel('Chip count', fontsize=15)
-    # ax2.set_ylabel('Chip count', fontsize=15)
-    # ax2sec.legend(loc='upper right', prop={'size': 11})
-
     # Win, lose and preflop fold
     allPreflopFolds = [sum(item[3]) for item in list(finalCounts[2].values())]
     allTrials = [len(item[3]) for item in list(finalCounts[2].values())]
     percentagePreflopFold = [a/b for a, b in zip(allPreflopFolds, allTrials)]
     width = .15
     x = np.arange(len(list(finalCounts[2].keys())))
-    first1 = ax3.bar(x-width-width/2, [sum(item[0]) for item in list(finalCounts[2].values())],
+    first1 = ax2.bar(x-width-width/2, [sum(item[0]) for item in list(finalCounts[2].values())],
                      width, label="Wins w/ showdown", color="g", hatch="")
-    first2 = ax3.bar(x-width/2, [sum(item[2]) for item in list(finalCounts[2].values())],
+    first2 = ax2.bar(x-width/2, [sum(item[2]) for item in list(finalCounts[2].values())],
                      width, label="Wins w/o showdown", color="yellowgreen", hatch="")
-    first3 = ax3.bar(x+width/2, [sum(item[1]) for item in list(finalCounts[2].values())],
+    first3 = ax2.bar(x+width/2, [sum(item[1]) for item in list(finalCounts[2].values())],
                      width, label="Losses", color="r", hatch="")
-    second = ax3sec.bar(x+width+width/2, percentagePreflopFold, width,
+    second = ax2sec.bar(x+width+width/2, percentagePreflopFold, width,
                         label="Preflop fold", color="dimgray", hatch="")
     # Make pretty
-    ax3.legend([first1, first2, first3, second], ["Wins w/ showdown", "Wins w/o showdown",
+    ax2.legend([first1, first2, first3, second], ["Wins w/ showdown", "Wins w/o showdown",
                                                   "Losses", "Preflop fold"], loc="upper left", prop={'size': 10}, frameon=True)
-    ax3.yaxis.set_label_position("left")
-    ax3.yaxis.tick_left()
+    ax2.yaxis.set_label_position("left")
+    ax2.yaxis.tick_left()
+    ax2.set_ylabel('Count', fontsize=15)
+    ax2.set_xticks(x)
+    ax2.set_xticklabels(list(finalCounts[2].keys()), rotation=40, fontsize=12)
+    try:  # corner case: everyone folds to BB. empty string -> max() fails
+        ax2.set_ylim(ymin=0, ymax=max([max([sum(item[0]) for item in list(finalCounts[2].values())]), max(
+            [sum(item[2]) for item in list(finalCounts[2].values())]), max([sum(item[1]) for item in list(finalCounts[2].values())])])+1)
+    except:
+        ax2.set_ylim(ymin=0, ymax=1)
+    ax2.tick_params(axis='x', labelsize=14)
+    ax2.tick_params(axis='y', labelsize=12)
+    ax2.set_title("- Wins, losses and preflop folds -",
+                  fontsize=16, fontweight="bold")
+    ax2.yaxis.set_major_locator(plt.MaxNLocator(8))
+    ax2sec.set_ylabel('Percentage', fontsize=15)
+    # ax2sec.set_yticks(
+    #    [x * ((100/5)/100) for x in range(0, 8)])
+    ax2sec.set_ylim(ymin=0, ymax=.8)
+    ax2sec.tick_params(axis='y', labelsize=11)
+    ax2sec.yaxis.set_major_locator(plt.MaxNLocator(8))
+    ax2.grid(True, which="major")
+
+    # All-in win & loss, rebuys
+    width = .15
+    ax3.bar(x-width, [sum(item[3]) for item in list(finalCounts[5].values())],
+            width, label="Re-buys", color="black", hatch="")
+    ax3.bar(x, [sum(item[1]) for item in list(finalCounts[5].values())],
+            width, label="All-ins won", color="g", hatch="")
+    ax3.bar(x+width, [sum(item[2]) for item in list(finalCounts[5].values())],
+            width, label="All-ins lost", color="r", hatch="")
+    # Make pretty
+    ax3.legend(loc="upper right", prop={'size': 10})
+    ax3.yaxis.set_label_position("right")
+    ax3.yaxis.tick_right()
     ax3.set_ylabel('Count', fontsize=15)
     ax3.set_xticks(x)
     ax3.set_xticklabels(list(finalCounts[2].keys()), rotation=40, fontsize=12)
     try:  # corner case: everyone folds to BB. empty string -> max() fails
-        ax3.set_ylim(ymin=0, ymax=max([max([sum(item[0]) for item in list(finalCounts[2].values())]), max(
-            [sum(item[2]) for item in list(finalCounts[2].values())]), max([sum(item[1]) for item in list(finalCounts[2].values())])])+1)
+        ax3.set_ylim(ymin=0, ymax=max([max([sum(item[1]) for item in list(finalCounts[5].values())]),  max(
+            [sum(item[2]) for item in list(finalCounts[5].values())]), max([sum(item[3]) for item in list(finalCounts[5].values())])])+1)
     except:
         ax3.set_ylim(ymin=0, ymax=1)
     ax3.tick_params(axis='x', labelsize=14)
     ax3.tick_params(axis='y', labelsize=12)
-    ax3.set_title("- Wins, losses and preflop folds -",
+    ax3.set_title("- All-in wins, losses and rebuys -",
                   fontsize=16, fontweight="bold")
-    ax3.yaxis.set_major_locator(plt.MaxNLocator(8))
-    ax3sec.set_ylabel('Percentage', fontsize=15)
-    # ax3sec.set_yticks(
-    #    [x * ((100/5)/100) for x in range(0, 8)])
-    ax3sec.set_ylim(ymin=0, ymax=.8)
-    ax3sec.tick_params(axis='y', labelsize=11)
-    ax3sec.yaxis.set_major_locator(plt.MaxNLocator(8))
     ax3.grid(True, which="major")
-
-    # All-in win & loss, rebuys
-    width = .15
-    ax4.bar(x-width, [sum(item[3]) for item in list(finalCounts[5].values())],
-            width, label="Re-buys", color="black", hatch="")
-    ax4.bar(x, [sum(item[1]) for item in list(finalCounts[5].values())],
-            width, label="All-ins won", color="g", hatch="")
-    ax4.bar(x+width, [sum(item[2]) for item in list(finalCounts[5].values())],
-            width, label="All-ins lost", color="r", hatch="")
-    # Make pretty
-    ax4.legend(loc="upper right", prop={'size': 10})
-    ax4.yaxis.set_label_position("right")
-    ax4.yaxis.tick_right()
-    ax4.set_ylabel('Count', fontsize=15)
-    ax4.set_xticks(x)
-    ax4.set_xticklabels(list(finalCounts[2].keys()), rotation=40, fontsize=12)
-    try:  # corner case: everyone folds to BB. empty string -> max() fails
-        ax4.set_ylim(ymin=0, ymax=max([max([sum(item[1]) for item in list(finalCounts[5].values())]),  max(
-            [sum(item[2]) for item in list(finalCounts[5].values())]), max([sum(item[3]) for item in list(finalCounts[5].values())])])+1)
-    except:
-        ax4.set_ylim(ymin=0, ymax=1)
-    ax4.tick_params(axis='x', labelsize=14)
-    ax4.tick_params(axis='y', labelsize=12)
-    ax4.set_title("- All-in wins, losses and rebuys -",
-                  fontsize=16, fontweight="bold")
-    ax4.grid(True, which="major")
-    # ax4.yaxis.set_major_locator(plt.MaxNLocator(8))
+    # ax3.yaxis.set_major_locator(plt.MaxNLocator(8))
 
     # sns.despine()
     plt.tight_layout()
