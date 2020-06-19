@@ -8,6 +8,10 @@ import seaborn as sns
 import numpy as np
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
+import smtplib
+import imghdr
+import csv
+from email.message import EmailMessage
 from matplotlib import style
 from oauth2client.service_account import ServiceAccountCredentials
 from time import time
@@ -18,30 +22,19 @@ from pathlib import Path
 # TODO: add preflop raises
 # TODO: add family pot percentage (counter)
 # TODO: Clean up the code
+# TODO: Nicer coding of the email address read-in
 # ? Possible to implement add rebuys of known players when they change accounts to buy in again
 
-# Define some paths and get the most recent hand history file
-handpath = "C:\\Users\\Michl\\Desktop\\poker_session\\DukeCroix"
-paths = sorted(Path(handpath).iterdir(), key=os.path.getmtime)
-filename = paths[-1]
-try:
-    os.makedirs('C:\\Users\\Michl\\Desktop\\poker_session\\')
-except OSError:
-    print("Folders already exist. Moved on...")
-finally:
-    savedir = 'C:\\Users\\Michl\\Desktop\\poker_session\\'
-# Some basic parameters
-chipCount_start = 10000
-big_blind = 100
-name_index = {"Benchi": ["BenchiWang", "MaFak2019", "Mafak2020"], "Dirk": ["JeBoyDirk"], "Ilja": ["Jackall23", "FragileMemory"], "Jan": ["color_singleton"], "Joshua": ["MrOB1reader", "Klemtonius"], "Manon": [
-    "Manon541", "Manon947"], "Michel": ["Duke"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"]}
-starti_players = 5
-starti_graph1 = 63
-starti_graph2 = 81
-
-date = input("What's the date?   -  ")
-
 # * Functions
+
+
+def create_dir(path):
+    try:
+        os.makedirs(path)
+    except OSError:
+        print("{} already exists. Moved on...".format(path))
+    
+    return path
 
 
 def timer(func):
@@ -176,20 +169,6 @@ def data_get():
     return f_counts
 
 
-# Start drawing
-# style.use("fivethirtyeight")
-# style.use("Solarize_Light2")
-# style.use("ggplot")
-# style.use("seaborn")
-style.use("seaborn-dark")
-fig = plt.figure(figsize=[19, 10])
-ax1 = plt.subplot2grid((6, 6), (0, 0), rowspan=4, colspan=6, fig=fig)
-ax2 = plt.subplot2grid((6, 6), (4, 0), rowspan=2, colspan=3, fig=fig)
-ax3 = plt.subplot2grid((6, 6), (4, 3), rowspan=2, colspan=3, fig=fig)
-ax1sec = ax1.twinx()
-ax2sec = ax2.twinx()
-
-
 @timer
 def update(interval):
     """Function to draw the data read out of hand history in real time
@@ -282,8 +261,6 @@ def update(interval):
                   fontsize=16, fontweight="bold")
     ax2.yaxis.set_major_locator(plt.MaxNLocator(8))
     ax2sec.set_ylabel('Percentage', fontsize=15)
-    # ax2sec.set_yticks(
-    #    [x * ((100/5)/100) for x in range(0, 8)])
     ax2sec.set_ylim(ymin=0, ymax=.8)
     ax2sec.tick_params(axis='y', labelsize=11)
     ax2sec.yaxis.set_major_locator(plt.MaxNLocator(8))
@@ -321,10 +298,70 @@ def update(interval):
     print("updated")
 
 
+def send_email(sender, recipients, subject, message, password=None, path_image=False, date="", smtp_server="smtp.gmail.com", smtp_port=465):
+    if password == False:
+        password = input("What's the password of the email account?  ")
+
+    msg = EmailMessage()
+    msg["Subject"] = subject
+    msg["From"] = sender
+    msg["To"] = ', '.join(recipients)
+    msg.set_content(message)
+
+    # Attachment
+    if path_image:
+        if type(path_image) is not list:
+            path_image = [path_image]
+        for c_file in path_image:
+            with open(c_file, "rb") as f:
+                file_data = f.read()
+                file_type = imghdr.what(f.name)
+            msg.add_attachment(file_data, maintype="image",
+                               subtype=file_type, filename="Statistics from poker night on {}".format(date))
+
+    # Send
+    with smtplib.SMTP_SSL(smtp_server, smtp_port) as smtp:
+        smtp.login(sender, password)
+        smtp.send_message(msg)
+
+
+# * Define some paths and get the most recent hand history file
+path_hand = create_dir("C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\hand_history\\DukeCroix")
+paths = sorted(Path(path_hand).iterdir(), key=os.path.getmtime)
+filename = paths[-1]
+
+path_image_save = create_dir('C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\stats\\')
+path_creds = create_dir("C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\creds\\") + "creds.json"
+path_email = create_dir("C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\email_list\\") + "email-list.csv"
+# Some basic parameters
+chipCount_start = 10000
+big_blind = 100
+name_index = {"Benchi": ["BenchiWang", "MaFak2019", "Mafak2020"], "Dirk": ["JeBoyDirk"], "Ilja": ["Jackall23", "FragileMemory"], "Jan": ["color_singleton"], "Joshua": ["MrOB1reader", "Klemtonius"], "Manon": [
+    "Manon541", "Manon947"], "Michel": ["Duke"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"]}
+starti_players = 5
+starti_graph1 = 63
+starti_graph2 = 81
+
+date = input("What's the date?   -  ")
+
+
 # * Actually start the showing the graph
+# style.use("fivethirtyeight")
+# style.use("Solarize_Light2")
+# style.use("ggplot")
+# style.use("seaborn")
+style.use("seaborn-dark")
+fig = plt.figure(figsize=[19, 10])
+ax1 = plt.subplot2grid((6, 6), (0, 0), rowspan=4, colspan=6, fig=fig)
+ax2 = plt.subplot2grid((6, 6), (4, 0), rowspan=2, colspan=3, fig=fig)
+ax3 = plt.subplot2grid((6, 6), (4, 3), rowspan=2, colspan=3, fig=fig)
+ax1sec = ax1.twinx()
+ax2sec = ax2.twinx()
+
+# Animate
 ani = animation.FuncAnimation(fig, update, interval=5000)
 plt.show()
-fig.savefig(savedir+"PokerOn_{}.svg".format(date), bbox_inched='tight')
+fig.savefig(path_image_save+"{}.eps".format(date), format="eps", dpi=600, bbox_inched='tight')
 
 # * Save to Google sheets?
 saveSession = input("Do you wanna save & upload (y/n)?   -  ")
@@ -333,8 +370,7 @@ if saveSession == 'y':
     scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
              "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
 
-    creds = ServiceAccountCredentials.from_json_keyfile_name(
-        "C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\creds\\creds.json", scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name(path_creds, scope)
 
     # To succesfully be authorized, share the spreadsheet on the google account with the email define in the credential.json file.
     client = gspread.authorize(creds)
@@ -348,6 +384,7 @@ if saveSession == 'y':
     current_worksheet = spreadsheet.get_worksheet(worksheet_no)
 
     # Update overall sheet
+    print("Updating spreadsheet ...\n")
     current_worksheet = spreadsheet.get_worksheet(0)
     old_date = current_worksheet.cell(
         starti_players, len(current_worksheet.row_values(starti_players))).value  # save old date for later
@@ -369,19 +406,30 @@ if saveSession == 'y':
     # Create new session sheet
     current_worksheet = spreadsheet.get_worksheet(-1)
 
+    # Prepare data
+    overview = {}
+    email_recipients = []
+    with open(path_email, mode="r") as infile:
+        reader = csv.reader(infile)
+        for rows in reader:
+            t_email_list = [rows for rows in reader]
+    message = "[automatically created email]\n\nHey guys,\n\nI just updated the excel sheet (https://docs.google.com/spreadsheets/d/1gkXoTGLdAhK8Tqx-yD8Mj2YO2dYev7WBXVQNRhh4EfM/edit?usp=sharing)!\n" + \
+        "I've attached the statistic overview picture to this email and see below for a short summary. As usual, lemme know if something is incorrect.\n\n" + \
+        "See you next time!\nMichel\n\n\n___Summary___\n\n(name : buyins / final chip count)\n"
+
     for i in range(len(name_index)):
         current_name = current_worksheet.get("A"+str(9+i))[0][0]
-        for name in name_index[current_name]:
-            if name in f_counts[1]:
+        for poker_alias in name_index[current_name]:
+            if poker_alias in f_counts[1]:
                 print("\n---\n")
                 # Look up buy-ins
                 if "count_buyin" in locals() or "count_buyin" in globals():
                     skip = input(
-                        "{} already has an entry other than {} with {} buy-ins. If you want to add counts enter 'add'  :  ".format(current_name, name, count_buyin))
+                        "{} already has an entry other than {} with {} buy-ins. If you want to add counts enter 'add'  :  ".format(current_name, poker_alias, count_buyin))
                     old_buyinCount = int(count_buyin)
-                count_buyin = sum(f_counts[5][name][3])+1
+                count_buyin = sum(f_counts[5][poker_alias][3])+1
                 saved_input = input(
-                    "Found {} as {} with {} buy-ins. Correct? (y/correction)  :  ".format(current_name, name, count_buyin))
+                    "Found {} as {} with {} buy-ins. Correct? (y/correction)  :  ".format(current_name, poker_alias, count_buyin))
                 if saved_input != "y":
                     count_buyin = int(saved_input)
                 try:
@@ -393,12 +441,12 @@ if saveSession == 'y':
                 # Look up chip count
                 if "chip_count" in locals() or "chip_count" in globals():
                     skip = input(
-                        "{} already has an entry as {} with {} chips and {} buy-ins. Skip? (y/n)  :  ".format(current_name, name, chip_count, count_buyin))
+                        "{} already has an entry as {} with {} chips and {} buy-ins. Skip? (y/n)  :  ".format(current_name, poker_alias, chip_count, count_buyin))
                     if skip != "n":
                         continue
-                chip_count = f_counts[1][name][0][-1]
+                chip_count = f_counts[1][poker_alias][0][-1]
                 saved_input = input(
-                    "Found {} as {} with {} chips. Correct? (y/correction)  :  ".format(current_name, name, chip_count))
+                    "Found {} as {} with {} chips. Correct? (y/correction)  :  ".format(current_name, poker_alias, chip_count))
                 if saved_input != "y":
                     chip_count = int(saved_input)
 
@@ -414,6 +462,16 @@ if saveSession == 'y':
         else:
             f_count_chip, f_count_buyin = 0, 0
 
+        # Update message and add player email to list of recipients
+        if f_count_buyin != 0:
+            message = message + \
+                "{} :   {}   /   {}\n".format(current_name, f_count_buyin,
+                                              f_count_chip)
+            current_email = str(
+                t_email_list[t_email_list.index(['{};'.format(current_name)])+1])
+            email_recipients.append(current_email.translate(
+                {ord(i): None for i in "[];'"}))
+
         # Update the worksheet
         current_worksheet.update_acell(
             "F{}".format(9+i), "='"+"{}".format(old_date)+"'"+"!H{}".format(9+i))  # gspread has trouble interpreting ' in a full string hence the fragmentation
@@ -424,5 +482,12 @@ if saveSession == 'y':
             del chip_count, count_buyin
         except:
             pass
+
+    # Send email?
+    s_email = input("Send an overview email ? (y/n)  :  ")
+    if s_email == "y":
+        send_email(sender=os.environ.get("EMAIL_ADDRESS_GMAIL"), recipients=email_recipients, subject="Overview Poker on {}".format(
+            date), message=message, password=os.environ.get("EMAIL_PASSWORD_GMAIL"), date=date, path_image=path_image_save+"{}.eps".format(date))
+
 
 print("\nDone!")

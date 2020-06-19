@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": "C:\\Users\\Michl\\Anaconda3\\envs\\misc\\python.exe"
+		"python.pythonPath": "C:\\Users\\Michl\\Anaconda3\\envs\\misc\\python.exe",
+		"git.ignoreLimitWarning": true
 	}
 }
