@@ -33,7 +33,7 @@ def create_dir(path):
         os.makedirs(path)
     except OSError:
         print("{} already exists. Moved on...".format(path))
-    
+
     return path
 
 
@@ -299,6 +299,30 @@ def update(interval):
 
 
 def send_email(sender, recipients, subject, message, password=None, path_image=False, date="", smtp_server="smtp.gmail.com", smtp_port=465):
+    """Sends an email to all players after the game containing a summary of the poker night and the statistics image attached.
+
+    Parameters
+    ----------
+    sender : str
+        Email of the sender
+    recipients : list of strings
+        Emails of the recipients
+    subject : str
+        Subject of the email
+    message : str
+        Body of the email message
+    password : str, optional
+        Password to email account, by default None
+    path_image : str, optional
+        Path to the image that ought to be attached, by default False
+    date : str, optional
+        Date of the poker night, by default ""
+    smtp_server : str, optional
+        Email server url, by default "smtp.gmail.com"
+    smtp_port : int, optional
+        Email server port, by default 465
+    """
+
     if password == False:
         password = input("What's the password of the email account?  ")
 
@@ -326,13 +350,17 @@ def send_email(sender, recipients, subject, message, password=None, path_image=F
 
 
 # * Define some paths and get the most recent hand history file
-path_hand = create_dir("C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\hand_history\\DukeCroix")
+path_hand = create_dir(
+    "C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\hand_history\\DukeCroix")
 paths = sorted(Path(path_hand).iterdir(), key=os.path.getmtime)
 filename = paths[-1]
 
-path_image_save = create_dir('C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\stats\\')
-path_creds = create_dir("C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\creds\\") + "creds.json"
-path_email = create_dir("C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\email_list\\") + "email-list.csv"
+path_image_save = create_dir(
+    'C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\stats\\')
+path_creds = create_dir(
+    "C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\creds\\") + "creds.json"
+path_email = create_dir(
+    "C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\email_list\\") + "email-list.csv"
 # Some basic parameters
 chipCount_start = 10000
 big_blind = 100
@@ -361,7 +389,8 @@ ax2sec = ax2.twinx()
 # Animate
 ani = animation.FuncAnimation(fig, update, interval=5000)
 plt.show()
-fig.savefig(path_image_save+"{}.eps".format(date), format="eps", dpi=600, bbox_inched='tight')
+fig.savefig(path_image_save+"{}.eps".format(date),
+            format="eps", dpi=600, bbox_inched='tight')
 
 # * Save to Google sheets?
 saveSession = input("Do you wanna save & upload (y/n)?   -  ")
