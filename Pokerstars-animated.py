@@ -22,13 +22,24 @@ from pathlib import Path
 # TODO: add preflop raises
 # TODO: add family pot percentage (counter)
 # TODO: Clean up the code
-# TODO: Nicer coding of the email address read-in
 # ? Possible to implement add rebuys of known players when they change accounts to buy in again
 
 # * Functions
 
 
 def create_dir(path):
+    """Helper function to create directories
+
+    Parameters
+    ----------
+    path : str
+        folder path to create
+
+    Returns
+    -------
+    path : str
+        returns the path
+    """
     try:
         os.makedirs(path)
     except OSError:
@@ -69,24 +80,27 @@ def data_extract(rawlines):
         For each player name (dict key) list of two lists for each hand played: chip count, corresponding hand number
     each_wins : dict
         For each player name (dict key) list of four lists of 0/1 for each hand played: won w/ showdown, lost w/ or w/o showdown, won w/o showdown, preflop fold
-    count_hand : dict
-        Counter for overall hands played
-    each_rake : dict
+    count_hand : list of ints
+        List of each hand number
+    each_rake : list of ints
         List of values for rake per hand
-    each_potsize : dict
+    each_potsize : list of ints
         List of values for pot size per hand
     each_allin : dict
         For each player name (dict key) list of four lists of 0/1 for each hand played: all-in, all-in won, bust, rebuy
+    count_family_pot : list of ints
+        List of 0/1 indicating presence/absence of a family pot
     """
 
-    each_chips, each_wins, count_hand, each_rake, each_potsize, count_allin = [
-        {}, {}, [0], [.01e-20], [.01e-20], {}]
+    each_chips, each_wins, count_hand, each_rake, each_potsize, count_allin, count_family_pot = [
+        {}, {}, [0], [.01e-20], [.01e-20], {}, [0]]
     for line in rawlines:
         words = line.split()
         if len(words) > 4 and words[0] not in ['***', 'Board', 'Table']:
             # Hand count
             if words[-1] == "ET":
                 count_hand.append(count_hand[-1]+1)
+                count_family_pot.append(1)
             # Chip count
             elif words[-1] == "chips)":
                 chips = int(words[-3][1:])
@@ -149,8 +163,9 @@ def data_extract(rawlines):
             # Preflop fold
             elif "before" in words:
                 each_wins[words[2]][3][-1] = 1
+                count_family_pot[-1] = 0
 
-    return count_hand, each_chips, each_wins, each_rake, each_potsize, count_allin
+    return count_hand, each_chips, each_wins, each_rake, each_potsize, count_allin, count_family_pot
 
 
 def data_get():
@@ -223,17 +238,16 @@ def update(interval):
     ax1.tick_params(axis='y', labelsize=15)
     ax1.axhline(chipCount_start, color="black", lw=1.5,
                 dashes=[6, 4], dash_capstyle="round")
-    ax1.set_title("- Chip count at hand #{0} ({1}/{2} game) -".format(
-        max(f_counts[0]), int(big_blind/2), big_blind), fontsize=17, fontweight="bold")
+    ax1.set_title("Chip count at hand # {0} ({1}/{2} game) with {3} family pots".format(
+        max(f_counts[0]), int(big_blind/2), big_blind, sum(f_counts[6])), fontsize=17, fontweight="bold")
     ax1.grid(True, which="major")
-    # ax1.yaxis.set_major_locator(plt.MaxNLocator(8))
 
     # Win, lose and preflop fold
     preflop_folds = [sum(item[3]) for item in list(f_counts[2].values())]
     all_trials = [len(item[3]) for item in list(f_counts[2].values())]
     percent_preflop_folds = [a/b for a, b in zip(preflop_folds, all_trials)]
-    width = .15
     x = np.arange(len(list(f_counts[2].keys())))
+    width = .15
     first1 = ax2.bar(x-width-width/2, [sum(item[0]) for item in list(f_counts[2].values())],
                      width, label="Wins w/ showdown", color="g", hatch="")
     first2 = ax2.bar(x-width/2, [sum(item[2]) for item in list(f_counts[2].values())],
@@ -241,10 +255,10 @@ def update(interval):
     first3 = ax2.bar(x+width/2, [sum(item[1]) for item in list(f_counts[2].values())],
                      width, label="Losses", color="r", hatch="")
     second = ax2sec.bar(x+width+width/2, percent_preflop_folds, width,
-                        label="Preflop fold", color="dimgray", hatch="")
+                        label="Preflop fold %", color="dimgray", hatch="")
     # Make pretty
     ax2.legend([first1, first2, first3, second], ["Wins w/ showdown", "Wins w/o showdown",
-                                                  "Losses", "Preflop fold"], loc="upper left", prop={'size': 10}, frameon=True)
+                                                  "Losses", "Preflop fold %"], loc="upper left", prop={'size': 10}, frameon=True)
     ax2.yaxis.set_label_position("left")
     ax2.yaxis.tick_left()
     ax2.set_ylabel('Count', fontsize=15)
@@ -257,7 +271,7 @@ def update(interval):
         ax2.set_ylim(ymin=0, ymax=1)
     ax2.tick_params(axis='x', labelsize=14)
     ax2.tick_params(axis='y', labelsize=12)
-    ax2.set_title("- Wins, losses and preflop folds -",
+    ax2.set_title("Wins, losses and preflop folds",
                   fontsize=16, fontweight="bold")
     ax2.yaxis.set_major_locator(plt.MaxNLocator(8))
     ax2sec.set_ylabel('Percentage', fontsize=15)
@@ -267,6 +281,7 @@ def update(interval):
     ax2.grid(True, which="major")
 
     # All-in win & loss, rebuys
+    x = np.arange(len(list(f_counts[2].keys())))
     width = .15
     ax3.bar(x-width, [sum(item[3]) for item in list(f_counts[5].values())],
             width, label="Re-buys", color="black", hatch="")
@@ -274,6 +289,8 @@ def update(interval):
             width, label="All-ins won", color="g", hatch="")
     ax3.bar(x+width, [sum(item[2]) for item in list(f_counts[5].values())],
             width, label="All-ins lost", color="r", hatch="")
+    #ax3.annotate("# of family pots:  {}".format(sum(f_counts[6])), xy=((len(x)-1)/2, max([sum(item[1]) for item in list(f_counts[5].values())]+[sum(item[2]) for item in list(
+    #    f_counts[5].values())]+[sum(item[3]) for item in list(f_counts[5].values())])), fontsize=13, fontstyle="normal", ha="center", annotation_clip=False, color="black")
     # Make pretty
     ax3.legend(loc="upper right", prop={'size': 10}, frameon=True)
     ax3.yaxis.set_label_position("right")
@@ -288,114 +305,41 @@ def update(interval):
         ax3.set_ylim(ymin=0, ymax=1)
     ax3.tick_params(axis='x', labelsize=14)
     ax3.tick_params(axis='y', labelsize=12)
-    ax3.set_title("- All-in wins, losses and rebuys -",
+    ax3.set_title("All-in wins, losses and rebuys",
                   fontsize=16, fontweight="bold")
     ax3.grid(True, which="major")
-    # ax3.yaxis.set_major_locator(plt.MaxNLocator(8))
 
     # sns.despine()
     plt.tight_layout()
     print("updated")
 
 
-def send_email(sender, recipients, subject, message, password=None, path_image=False, date="", smtp_server="smtp.gmail.com", smtp_port=465):
-    """Sends an email to all players after the game containing a summary of the poker night and the statistics image attached.
+def save_session(spreadsheet, date, name_index, starti_players=5, starti_graph1=63, starti_graph2=81):
+    """Function to save session to google spreadsheet
 
     Parameters
     ----------
-    sender : str
-        Email of the sender
-    recipients : list of strings
-        Emails of the recipients
-    subject : str
-        Subject of the email
-    message : str
-        Body of the email message
-    password : str, optional
-        Password to email account, by default None
-    path_image : str, optional
-        Path to the image that ought to be attached, by default False
-    date : str, optional
-        Date of the poker night, by default ""
-    smtp_server : str, optional
-        Email server url, by default "smtp.gmail.com"
-    smtp_port : int, optional
-        Email server port, by default 465
+    spreadsheet : str
+        name of the google spreadsheet
+    date : [str
+        date of poker night
+    name_index : dict
+        dictionary containing player names and their PokerStars aliases
+    starti_players : int, optional
+        starting index for the chip count list in overview, by default 5
+    starti_graph1 : int, optional
+        starting index for the chip count list of graph 1, by default 63
+    starti_graph2 : int, optional
+        starting index for the chip count list of graph 2, by default 81
+
+    Returns
+    -------
+    email_message : str
+        message to send via email
+    email_recipients : list of str
+        contains all the emails of players that participated
     """
 
-    if password == False:
-        password = input("What's the password of the email account?  ")
-
-    msg = EmailMessage()
-    msg["Subject"] = subject
-    msg["From"] = sender
-    msg["To"] = ', '.join(recipients)
-    msg.set_content(message)
-
-    # Attachment
-    if path_image:
-        if type(path_image) is not list:
-            path_image = [path_image]
-        for c_file in path_image:
-            with open(c_file, "rb") as f:
-                file_data = f.read()
-                file_type = imghdr.what(f.name)
-            msg.add_attachment(file_data, maintype="image",
-                               subtype=file_type, filename="Statistics from poker night on {}".format(date))
-
-    # Send
-    with smtplib.SMTP_SSL(smtp_server, smtp_port) as smtp:
-        smtp.login(sender, password)
-        smtp.send_message(msg)
-
-
-# * Define some paths and get the most recent hand history file
-path_hand = create_dir(
-    "C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\hand_history\\DukeCroix")
-paths = sorted(Path(path_hand).iterdir(), key=os.path.getmtime)
-filename = paths[-1]
-
-path_image_save = create_dir(
-    'C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\stats\\')
-path_creds = create_dir(
-    "C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\creds\\") + "creds.json"
-path_email = create_dir(
-    "C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\email_list\\") + "email-list.csv"
-# Some basic parameters
-chipCount_start = 10000
-big_blind = 100
-name_index = {"Benchi": ["BenchiWang", "MaFak2019", "Mafak2020"], "Dirk": ["JeBoyDirk"], "Ilja": ["Jackall23", "FragileMemory"], "Jan": ["color_singleton"], "Joshua": ["MrOB1reader", "Klemtonius"], "Manon": [
-    "Manon541", "Manon947"], "Michel": ["Duke"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"]}
-starti_players = 5
-starti_graph1 = 63
-starti_graph2 = 81
-
-date = input("What's the date?   -  ")
-
-
-# * Actually start the showing the graph
-# style.use("fivethirtyeight")
-# style.use("Solarize_Light2")
-# style.use("ggplot")
-# style.use("seaborn")
-style.use("seaborn-dark")
-fig = plt.figure(figsize=[19, 10])
-ax1 = plt.subplot2grid((6, 6), (0, 0), rowspan=4, colspan=6, fig=fig)
-ax2 = plt.subplot2grid((6, 6), (4, 0), rowspan=2, colspan=3, fig=fig)
-ax3 = plt.subplot2grid((6, 6), (4, 3), rowspan=2, colspan=3, fig=fig)
-ax1sec = ax1.twinx()
-ax2sec = ax2.twinx()
-
-# Animate
-ani = animation.FuncAnimation(fig, update, interval=5000)
-plt.show()
-fig.savefig(path_image_save+"{}.eps".format(date),
-            format="eps", dpi=600, bbox_inched='tight')
-
-# * Save to Google sheets?
-saveSession = input("Do you wanna save & upload (y/n)?   -  ")
-
-if saveSession == 'y':
     scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
              "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
 
@@ -403,7 +347,7 @@ if saveSession == 'y':
 
     # To succesfully be authorized, share the spreadsheet on the google account with the email define in the credential.json file.
     client = gspread.authorize(creds)
-    spreadsheet = client.open("lockdown-poker")  # Open the spreadsheet
+    spreadsheet = client.open(spreadsheet)  # Open the spreadsheet
     f_counts = data_get()
 
     # Create new session sheet
@@ -442,9 +386,10 @@ if saveSession == 'y':
         reader = csv.reader(infile)
         for rows in reader:
             t_email_list = [rows for rows in reader]
-    message = "[automatically created email]\n\nHey guys,\n\nI just updated the excel sheet (https://docs.google.com/spreadsheets/d/1gkXoTGLdAhK8Tqx-yD8Mj2YO2dYev7WBXVQNRhh4EfM/edit?usp=sharing)!\n" + \
+    email_message = "[automatically created email]\n\nHey guys,\n\nI just updated the excel sheet (https://docs.google.com/spreadsheets/d/1gkXoTGLdAhK8Tqx-yD8Mj2YO2dYev7WBXVQNRhh4EfM/edit?usp=sharing)!\n" + \
         "I've attached the statistic overview picture to this email and see below for a short summary. As usual, lemme know if something is incorrect.\n\n" + \
-        "See you next time!\nMichel\n\n\n___Summary___\n\n(name : buyins / final chip count)\n"
+        "See you next time!\nMichel\n\n\nSummary ({} hands played with {} family pots)\n\n(name : buyins / chip count)\n".format(
+            max(f_counts[0]), sum(f_counts[6]))
 
     for i in range(len(name_index)):
         current_name = current_worksheet.get("A"+str(9+i))[0][0]
@@ -483,17 +428,17 @@ if saveSession == 'y':
             saved_input = input(
                 "Saving {} with {} chips and {} buy-ins. Correct? (y/n)  :  ".format(current_name, chip_count, count_buyin))
             if saved_input != "y":
-                f_count_chip = int(input(
+                chip_count = int(input(
                     "The chip count of {} ({}) should be  :  ".format(current_name, chip_count)))
-                f_count_buyin = int(input(
+                count_buyin = int(input(
                     "The buy-ins count of {} ({}) should be  :  ".format(current_name, count_buyin)))
             f_count_chip, f_count_buyin = chip_count, count_buyin
         else:
             f_count_chip, f_count_buyin = 0, 0
 
-        # Update message and add player email to list of recipients
+        # Update email_message and add player email to list of recipients
         if f_count_buyin != 0:
-            message = message + \
+            email_message = email_message + \
                 "{} :   {}   /   {}\n".format(current_name, f_count_buyin,
                                               f_count_chip)
             current_email = str(
@@ -512,11 +457,119 @@ if saveSession == 'y':
         except:
             pass
 
-    # Send email?
+    return email_message, email_recipients
+
+
+def send_email(sender, recipients, subject, message, password=None, path_image=False, date="", smtp_server="smtp.gmail.com", smtp_port=465):
+    """Sends an email to all players after the game containing a summary of the poker night and the statistics image attached.
+
+    Parameters
+    ----------
+    sender : str
+        Email of the sender
+    recipients : list of strings
+        Emails of the recipients
+    subject : str
+        Subject of the email
+    message : str
+        Body of the email message
+    password : str, optional
+        Password to email account, by default None
+    path_image : str, optional
+        Path to the image that ought to be attached, by default False
+    date : str, optional
+        Date of the poker night, by default ""
+    smtp_server : str, optional
+        Email server url, by default "smtp.gmail.com"
+    smtp_port : int, optional
+        Email server port, by default 465
+    """
+
+    if password == False:
+        password = input("What's the password of the email account?  ")
+
+    # Subject, body and recipients
+    msg = EmailMessage()
+    msg["Subject"] = subject
+    msg["From"] = sender
+    if type(recipients) is not list:
+        recipients = [recipients]
+    msg["To"] = ', '.join(recipients)
+    msg.set_content(message)
+
+    # Attachment
+    if path_image:
+        if type(path_image) is not list:
+            path_image = [path_image]
+        for c_file in path_image:
+            try:
+                os.path.isfile(c_file)
+            except:
+                c_file = str(input(
+                    "{} is no valid file. Type in a correct path:   ".format(c_file)))
+            with open(c_file, "rb") as f:
+                file_data = f.read()
+                file_type = imghdr.what(f.name)
+            msg.add_attachment(file_data, maintype="image",
+                               subtype=file_type, filename="Statistics_poker_{}.{}".format(date, file_type))
+
+    # Send
+    with smtplib.SMTP_SSL(smtp_server, smtp_port) as smtp:
+        smtp.login(sender, password)
+        smtp.send_message(msg)
+
+
+### Run the script ###
+# * Define some paths and get the most recent hand history file
+path_hand = create_dir(
+    "C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\hand_history\\DukeCroix")
+paths = sorted(Path(path_hand).iterdir(), key=os.path.getmtime)
+filename = paths[-1]
+
+path_image_save = create_dir(
+    'C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\stats\\')
+path_creds = create_dir(
+    "C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\creds\\") + "creds.json"
+path_email = create_dir(
+    "C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\email_list\\") + "email-list.csv"
+# Some basic parameters
+chipCount_start = 10000
+big_blind = 100
+name_index = {"Benchi": ["BenchiWang", "MaFak2019", "Mafak2020"], "Dirk": ["JeBoyDirk"], "Ilja": ["Jackall23", "FragileMemory"], "Jan": ["color_singleton"], "Joshua": ["MrOB1reader", "Klemtonius"], "Manon": [
+    "Manon541", "Manon947"], "Michel": ["Duke"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"]}
+date = input("What's the date?   :  ")
+
+
+# * Actually start the showing the graph
+style.use("seaborn-dark")
+fig = plt.figure(figsize=[19, 10])
+ax1 = plt.subplot2grid((6, 6), (0, 0), rowspan=4, colspan=6, fig=fig)
+ax2 = plt.subplot2grid((6, 6), (4, 0), rowspan=2, colspan=3, fig=fig)
+ax3 = plt.subplot2grid((6, 6), (4, 3), rowspan=2, colspan=3, fig=fig)
+ax1sec = ax1.twinx()
+ax2sec = ax2.twinx()
+
+# Animate
+ani = animation.FuncAnimation(fig, update, interval=5000)
+plt.show()
+
+savePics = input("Safe pics (y/n)?   :  ")
+if savePics == 'y':
+    fig.savefig(path_image_save+"{}.png".format(date),
+                format="png", dpi=400, bbox_inched='tight')
+    fig.savefig(path_image_save+"{}.svg".format(date),
+                format="svg", bbox_inched='tight')
+
+# * Save to Google sheets?
+saveSession = input("Upload (y/n)?   :  ")
+if saveSession == 'y':
+    email_message, email_recipients = save_session(
+        spreadsheet="lockdown-poker", date=date, name_index=name_index)
+
+    # * Send email?
     s_email = input("Send an overview email ? (y/n)  :  ")
     if s_email == "y":
-        send_email(sender=os.environ.get("EMAIL_ADDRESS_GMAIL"), recipients=email_recipients, subject="Overview Poker on {}".format(
-            date), message=message, password=os.environ.get("EMAIL_PASSWORD_GMAIL"), date=date, path_image=path_image_save+"{}.eps".format(date))
-
+        send_email(sender=os.environ.get("EMAIL_ADDRESS_GMAIL"), recipients=[email_recipients], subject="Overview Poker night {}".format(
+            date), message=email_message, password=os.environ.get("EMAIL_PASSWORD_GMAIL"), date=date, path_image=path_image_save+"{}.png".format(date))
 
 print("\nDone!")
