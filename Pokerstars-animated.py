@@ -569,7 +569,7 @@ if saveSession == 'y':
     # * Send email?
     s_email = input("Send an overview email ? (y/n)  :  ")
     if s_email == "y":
-        send_email(sender=os.environ.get("EMAIL_ADDRESS_GMAIL"), recipients=[email_recipients], subject="Overview Poker night {}".format(
+        send_email(sender=os.environ.get("EMAIL_ADDRESS_GMAIL"), recipients=email_recipients, subject="Overview Poker night {}".format(
             date), message=email_message, password=os.environ.get("EMAIL_PASSWORD_GMAIL"), date=date, path_image=path_image_save+"{}.png".format(date))
 
 print("\nDone!")
