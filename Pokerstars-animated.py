@@ -43,7 +43,7 @@ def create_dir(path):
     try:
         os.makedirs(path)
     except OSError:
-        print("{} already exists. Moved on...".format(path))
+        print(f"{path} already exists. Moved on...")
 
     return path
 
@@ -238,8 +238,7 @@ def update(interval):
     ax1.tick_params(axis='y', labelsize=15)
     ax1.axhline(chipCount_start, color="black", lw=1.5,
                 dashes=[6, 4], dash_capstyle="round")
-    ax1.set_title("Chip count at hand # {0} ({1}/{2} game) with {3} family pots".format(
-        max(f_counts[0]), int(big_blind/2), big_blind, sum(f_counts[6])), fontsize=17, fontweight="bold")
+    ax1.set_title(f"Chip count at hand # {max(f_counts[0])} ({int(big_blind/2)}/{big_blind} game) with {sum(f_counts[6])} family pots", fontsize=17, fontweight="bold")
     ax1.grid(True, which="major")
 
     # Win, lose and preflop fold
@@ -370,11 +369,11 @@ def save_session(spreadsheet, date, name_index, starti_players=5, starti_graph1=
         starti_graph2, len(current_worksheet.row_values(starti_graph2))+1, date)
     for i in range(len(name_index)):
         current_worksheet.update_cell(
-            starti_players+1+i, len(current_worksheet.row_values(starti_players)), "='{}'!G{}".format(date, 9+i))
+            starti_players+1+i, len(current_worksheet.row_values(starti_players)), f"='{date}'!G{9+i}")
         current_worksheet.update_cell(
-            starti_graph1+1+i,  len(current_worksheet.row_values(starti_graph1)), "=SUM($E${0}:{1}{0})".format(6+i, string.ascii_lowercase[len(current_worksheet.row_values(starti_players))-1]))
+            starti_graph1+1+i,  len(current_worksheet.row_values(starti_graph1)), f"=SUM($E${6+i}:{string.ascii_lowercase[len(current_worksheet.row_values(starti_players))-1]}{6+i})")
         current_worksheet.update_cell(
-            starti_graph2+1+i,  len(current_worksheet.row_values(starti_graph2)), "={}{}".format(string.ascii_lowercase[len(current_worksheet.row_values(starti_players))-1], starti_players+1+i))
+            starti_graph2+1+i,  len(current_worksheet.row_values(starti_graph2)), f"={string.ascii_lowercase[len(current_worksheet.row_values(starti_players))-1]}{starti_players+1+i}")
 
     # Create new session sheet
     current_worksheet = spreadsheet.get_worksheet(-1)
@@ -386,10 +385,9 @@ def save_session(spreadsheet, date, name_index, starti_players=5, starti_graph1=
         reader = csv.reader(infile)
         for rows in reader:
             t_email_list = [rows for rows in reader]
-    email_message = "[automatically created email]\n\nHey guys,\n\nI just updated the excel sheet (https://docs.google.com/spreadsheets/d/1gkXoTGLdAhK8Tqx-yD8Mj2YO2dYev7WBXVQNRhh4EfM/edit?usp=sharing)!\n" + \
-        "I've attached the statistic overview picture to this email and see below for a short summary. As usual, lemme know if something is incorrect.\n\n" + \
-        "See you next time!\nMichel\n\n\nSummary ({} hands played with {} family pots)\n\n(name : buyins / chip count)\n".format(
-            max(f_counts[0]), sum(f_counts[6]))
+    email_message = f"[automatically created email]\n\nHey guys,\n\nI just updated the excel sheet (https://docs.google.com/spreadsheets/d/1gkXoTGLdAhK8Tqx-yD8Mj2YO2dYev7WBXVQNRhh4EfM/edit?usp=sharing)!\n" + \
+        f"I've attached the statistic overview picture to this email and see below for a short summary. As usual, lemme know if something is incorrect.\n\n" + \
+        f"See you next time!\nMichel\n\n\nSummary ({max(f_counts[0])} hands played with {sum(f_counts[6])} family pots)\n\n(name : buyins / chip count)\n"
 
     for i in range(len(name_index)):
         current_name = current_worksheet.get("A"+str(9+i))[0][0]
@@ -399,11 +397,11 @@ def save_session(spreadsheet, date, name_index, starti_players=5, starti_graph1=
                 # Look up buy-ins
                 if "count_buyin" in locals() or "count_buyin" in globals():
                     skip = input(
-                        "{} already has an entry other than {} with {} buy-ins. If you want to add counts enter 'add'  :  ".format(current_name, poker_alias, count_buyin))
+                        f"{current_name} already has an entry other than {poker_alias} with {count_buyin} buy-ins. If you want to add counts enter 'add'  :  ")
                     old_buyinCount = int(count_buyin)
                 count_buyin = sum(f_counts[5][poker_alias][3])+1
                 saved_input = input(
-                    "Found {} as {} with {} buy-ins. Correct? (y/correction)  :  ".format(current_name, poker_alias, count_buyin))
+                    f"Found {current_name} as {poker_alias} with {count_buyin} buy-ins. Correct? (y/correction)  :  ")
                 if saved_input != "y":
                     count_buyin = int(saved_input)
                 try:
@@ -415,23 +413,23 @@ def save_session(spreadsheet, date, name_index, starti_players=5, starti_graph1=
                 # Look up chip count
                 if "chip_count" in locals() or "chip_count" in globals():
                     skip = input(
-                        "{} already has an entry as {} with {} chips and {} buy-ins. Skip? (y/n)  :  ".format(current_name, poker_alias, chip_count, count_buyin))
+                        f"{current_name} already has an entry as {poker_alias} with {chip_count} chips and {count_buyin} buy-ins. Skip? (y/n)  :  ")
                     if skip != "n":
                         continue
                 chip_count = f_counts[1][poker_alias][0][-1]
                 saved_input = input(
-                    "Found {} as {} with {} chips. Correct? (y/correction)  :  ".format(current_name, poker_alias, chip_count))
+                    f"Found {current_name} as {poker_alias} with {chip_count} chips. Correct? (y/correction)  :  ")
                 if saved_input != "y":
                     chip_count = int(saved_input)
 
         if "chip_count" in locals() or "chip_count" in globals():
             saved_input = input(
-                "Saving {} with {} chips and {} buy-ins. Correct? (y/n)  :  ".format(current_name, chip_count, count_buyin))
+                f"Saving {current_name} with {chip_count} chips and {count_buyin} buy-ins. Correct? (y/n)  :  ")
             if saved_input != "y":
                 chip_count = int(input(
-                    "The chip count of {} ({}) should be  :  ".format(current_name, chip_count)))
+                    f"The chip count of {current_name} ({chip_count}) should be  :  "))
                 count_buyin = int(input(
-                    "The buy-ins count of {} ({}) should be  :  ".format(current_name, count_buyin)))
+                    f"The buy-ins count of {current_name} ({count_buyin}) should be  :  "))
             f_count_chip, f_count_buyin = chip_count, count_buyin
         else:
             f_count_chip, f_count_buyin = 0, 0
@@ -439,18 +437,17 @@ def save_session(spreadsheet, date, name_index, starti_players=5, starti_graph1=
         # Update email_message and add player email to list of recipients
         if f_count_buyin != 0:
             email_message = email_message + \
-                "{} :   {}   /   {}\n".format(current_name, f_count_buyin,
-                                              f_count_chip)
+                f"{current_name} :   {f_count_buyin}   /   {f_count_chip}\n"
             current_email = str(
-                t_email_list[t_email_list.index(['{};'.format(current_name)])+1])
+                t_email_list[t_email_list.index([f'{current_name};'])+1])
             email_recipients.append(current_email.translate(
                 {ord(i): None for i in "[];'"}))
 
         # Update the worksheet
         current_worksheet.update_acell(
-            "F{}".format(9+i), "='"+"{}".format(old_date)+"'"+"!H{}".format(9+i))  # gspread has trouble interpreting ' in a full string hence the fragmentation
-        current_worksheet.update_acell("B{}".format(9+i), f_count_buyin)
-        current_worksheet.update_acell("D{}".format(9+i), f_count_chip)
+            f"F{9+i}", "='"+f"{old_date}"+"'"+f"!H{9+i}")  # gspread has trouble interpreting ' in a full string hence the fragmentation
+        current_worksheet.update_acell(f"B{9+i}", f_count_buyin)
+        current_worksheet.update_acell(f"D{9+i}", f_count_chip)
         # Attempt clean-up
         try:
             del chip_count, count_buyin
@@ -506,12 +503,12 @@ def send_email(sender, recipients, subject, message, password=None, path_image=F
                 os.path.isfile(c_file)
             except:
                 c_file = str(input(
-                    "{} is no valid file. Type in a correct path:   ".format(c_file)))
+                    f"{c_file} is no valid file. Type in a correct path:   "))
             with open(c_file, "rb") as f:
                 file_data = f.read()
                 file_type = imghdr.what(f.name)
             msg.add_attachment(file_data, maintype="image",
-                               subtype=file_type, filename="Statistics_poker_{}.{}".format(date, file_type))
+                               subtype=file_type, filename=f"Statistics_poker_{date}.{file_type}")
 
     # Send
     with smtplib.SMTP_SSL(smtp_server, smtp_port) as smtp:
@@ -555,10 +552,8 @@ plt.show()
 
 savePics = input("Safe pics (y/n)?   :  ")
 if savePics == 'y':
-    fig.savefig(path_image_save+"{}.png".format(date),
-                format="png", dpi=400, bbox_inched='tight')
-    fig.savefig(path_image_save+"{}.svg".format(date),
-                format="svg", bbox_inched='tight')
+    fig.savefig(path_image_save+f"{date}.png", format="png", dpi=400, bbox_inched='tight')
+    fig.savefig(path_image_save+f"{date}.svg", format="svg", bbox_inched='tight')
 
 # * Save to Google sheets?
 saveSession = input("Upload (y/n)?   :  ")
@@ -569,7 +564,6 @@ if saveSession == 'y':
     # * Send email?
     s_email = input("Send an overview email ? (y/n)  :  ")
     if s_email == "y":
-        send_email(sender=os.environ.get("EMAIL_ADDRESS_GMAIL"), recipients=email_recipients, subject="Overview Poker night {}".format(
-            date), message=email_message, password=os.environ.get("EMAIL_PASSWORD_GMAIL"), date=date, path_image=path_image_save+"{}.png".format(date))
+        send_email(sender=os.environ.get("EMAIL_ADDRESS_GMAIL"), recipients=email_recipients, subject=f"Overview Poker night {date}", message=email_message, password=os.environ.get("EMAIL_PASSWORD_GMAIL"), date=date, path_image=path_image_save+f"{date}.png")
 
 print("\nDone!")
