@@ -169,7 +169,7 @@ def data_extract(rawlines):
 
 
 def data_get():
-    """Function that opens the hand history file and calls extract data function
+    """Function that opens the hand history file and calls data_extract function
 
     Returns
     -------
@@ -533,7 +533,7 @@ path_email = create_dir(
 chipCount_start = 10000
 big_blind = 100
 name_index = {"Benchi": ["BenchiWang", "MaFak2019", "Mafak2020"], "Dirk": ["JeBoyDirk"], "Ilja": ["Jackall23", "FragileMemory"], "Jan": ["color_singleton"], "Joshua": ["MrOB1reader", "Klemtonius"], "Manon": [
-    "Manon541", "Manon947"], "Michel": ["Duke"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"]}
+    "Manon541", "Manon947"], "Michel": ["Duke"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"], "Yavor": ["RichRick1337"]}
 date = input("What's the date?   :  ")
 
 
