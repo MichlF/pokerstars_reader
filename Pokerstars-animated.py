@@ -439,7 +439,7 @@ def save_session(spreadsheet, date, name_index, starti_players=5, starti_graph1=
             email_message = email_message + \
                 f"{current_name} :   {f_count_buyin}   /   {f_count_chip}\n"
             current_email = str(
-                t_email_list[t_email_list.index([f'{current_name};'])+1])
+                t_email_list[t_email_list.index([f'{current_name}'])+1])
             email_recipients.append(current_email.translate(
                 {ord(i): None for i in "[];'"}))
 
@@ -562,6 +562,8 @@ if saveSession == 'y':
         spreadsheet="lockdown-poker", date=date, name_index=name_index)
 
     # * Send email?
+    print("Email message prepared:")
+    print(email_message)
     s_email = input("Send an overview email ? (y/n)  :  ")
     if s_email == "y":
         send_email(sender=os.environ.get("EMAIL_ADDRESS_GMAIL"), recipients=email_recipients, subject=f"Overview Poker night {date}", message=email_message, password=os.environ.get("EMAIL_PASSWORD_GMAIL"), date=date, path_image=path_image_save+f"{date}.png")
