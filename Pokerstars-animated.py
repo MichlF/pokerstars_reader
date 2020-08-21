@@ -398,12 +398,12 @@ def save_session(spreadsheet, date, name_index, starti_players=5, starti_graph1=
                 if "count_buyin" in locals() or "count_buyin" in globals():
                     skip = input(
                         f"{current_name} already has an entry other than {poker_alias} with {count_buyin} buy-ins. If you want to add counts enter 'add'  :  ")
-                    old_buyinCount = int(count_buyin)
+                    old_buyinCount = float(count_buyin)
                 count_buyin = sum(f_counts[5][poker_alias][3])+1
                 saved_input = input(
                     f"Found {current_name} as {poker_alias} with {count_buyin} buy-ins. Correct? (y/correction)  :  ")
                 if saved_input != "y":
-                    count_buyin = int(saved_input)
+                    count_buyin = float(saved_input)
                 try:
                     if skip == "add":
                         count_buyin += old_buyinCount
@@ -428,7 +428,7 @@ def save_session(spreadsheet, date, name_index, starti_players=5, starti_graph1=
             if saved_input != "y":
                 chip_count = int(input(
                     f"The chip count of {current_name} ({chip_count}) should be  :  "))
-                count_buyin = int(input(
+                count_buyin = float(input(
                     f"The buy-ins count of {current_name} ({count_buyin}) should be  :  "))
             f_count_chip, f_count_buyin = chip_count, count_buyin
         else:
@@ -553,8 +553,8 @@ plt.show()
 
 savePics = input("Safe pics (y/n)?   :  ")
 if savePics == 'y':
-    fig.savefig(path_image_save+f"{date}.png", format="png", dpi=400, bbox_inched='tight')
-    fig.savefig(path_image_save+f"{date}.svg", format="svg", bbox_inched='tight')
+    fig.savefig(path_image_save+f"{date}.png", format="png", dpi=400, bbox_inches='tight')
+    fig.savefig(path_image_save+f"{date}.svg", format="svg", bbox_inches='tight')
 
 # * Save to Google sheets?
 saveSession = input("Upload (y/n)?   :  ")
