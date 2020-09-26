@@ -370,10 +370,18 @@ def save_session(spreadsheet, date, name_index, starti_players=5, starti_graph1=
     for i in range(len(name_index)):
         current_worksheet.update_cell(
             starti_players+1+i, len(current_worksheet.row_values(starti_players)), f"='{date}'!G{9+i}")
-        current_worksheet.update_cell(
-            starti_graph1+1+i,  len(current_worksheet.row_values(starti_graph1)), f"=SUM($E${6+i}:{string.ascii_lowercase[len(current_worksheet.row_values(starti_players))-1]}{6+i})")
-        current_worksheet.update_cell(
-            starti_graph2+1+i,  len(current_worksheet.row_values(starti_graph2)), f"={string.ascii_lowercase[len(current_worksheet.row_values(starti_players))-1]}{starti_players+1+i}")
+        if len(current_worksheet.row_values(starti_players)) > len(string.ascii_lowercase): # start again with the alphabet
+            current_worksheet.update_cell(
+                starti_graph1+1+i,  len(current_worksheet.row_values(starti_graph1)), f"=SUM($E${6+i}:{'a' + string.ascii_lowercase[len(current_worksheet.row_values(starti_players))-1-len(string.ascii_lowercase)]}{6+i})")
+            current_worksheet.update_cell(
+                starti_graph2+1+i,  len(current_worksheet.row_values(starti_graph2)), f"={'a' + string.ascii_lowercase[len(current_worksheet.row_values(starti_players))-1-len(string.ascii_lowercase)]}{starti_players+1+i}")
+        elif len(current_worksheet.row_values(starti_players)) > 2*len(string.ascii_lowercase):
+            print("We are now twice over the column index of A through Z and have to start with AAA...")
+        else:
+            current_worksheet.update_cell(
+                starti_graph1+1+i,  len(current_worksheet.row_values(starti_graph1)), f"=SUM($E${6+i}:{string.ascii_lowercase[len(current_worksheet.row_values(starti_players))-1]}{6+i})")
+            current_worksheet.update_cell(
+                starti_graph2+1+i,  len(current_worksheet.row_values(starti_graph2)), f"={string.ascii_lowercase[len(current_worksheet.row_values(starti_players))-1]}{starti_players+1+i}")
 
     # Create new session sheet
     current_worksheet = spreadsheet.get_worksheet(-1)
