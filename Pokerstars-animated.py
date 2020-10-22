@@ -541,7 +541,7 @@ path_email = create_dir(
 chipCount_start = 10000
 big_blind = 100
 name_index = {"Benchi": ["BenchiWang", "MaFak2019", "Mafak2020"], "Dirk": ["JeBoyDirk"], "Ilja": ["Jackall23", "FragileMemory"], "Jan": ["color_singleton"], "Joshua": ["MrOB1reader", "Klemtonius"], "Manon": [
-    "Manon541", "Manon947", "MnnM150"], "Michel": ["Duke"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"], "Yavor": ["RichRick1337"],
+    "Manon541", "Manon947", "MnnM150"], "Michel": ["Duke"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"], "Yavor": ["RichRick1337", "poorrick1338"],
     "Rogier": ["rogierk449"], "Clayton": ["appositive"]}
 date = input("What's the date?   :  ")
 
