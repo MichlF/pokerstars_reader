@@ -527,7 +527,7 @@ def send_email(sender, recipients, subject, message, password=None, path_image=F
 ### Run the script ###
 # * Define some paths and get the most recent hand history file
 path_hand = create_dir(
-    "C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\hand_history\\FantasticDouble")
+    "C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\hand_history\\PokerStarMan123")
 paths = sorted(Path(path_hand).iterdir(), key=os.path.getmtime)
 filename = paths[-1]
 
@@ -541,7 +541,7 @@ path_email = create_dir(
 chipCount_start = 10000
 big_blind = 100
 name_index = {"Benchi": ["BenchiWang", "MaFak2019", "Mafak2020"], "Dirk": ["JeBoyDirk"], "Ilja": ["Jackall23", "FragileMemory"], "Jan": ["color_singleton"], "Joshua": ["MrOB1reader", "Klemtonius"], "Manon": [
-    "Manon541", "Manon947", "MnnM150", "manon327"], "Michel": ["Duke", "FantasticDouble"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"], "Yavor": ["RichRick1337", "poorrick1338"],
+    "Manon541", "Manon947", "MnnM150", "manon327"], "Michel": ["Duke", "FantasticDouble", "PokerStarMan123"], "Yair": ["yairpinto"], "Steven": ["JachtSlot"], "Jasper": ["HighCardJasper"], "Docky": ["dhduncan", "dddocky"], "Ruben": ["Rubeneero"], "Yavor": ["RichRick1337", "poorrick1338"],
     "Rogier": ["rogierk449"], "Clayton": ["appositive"]}
 date = input("What's the date?   :  ")
 
