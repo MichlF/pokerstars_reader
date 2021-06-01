@@ -1,0 +1,2285 @@
+﻿PokerStars Home Game Hand #226725479077: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:26:46 ET
+Table 'again and again' 9-max (Play Money) Seat #1 is the button
+Seat 1: color_singleton (10525 in chips) 
+Seat 2: Jackall23 (8800 in chips) 
+Seat 3: PokerStarMan123 (10000 in chips) 
+Seat 4: Klemtonius (10020 in chips) 
+Seat 8: MaFak2019 (9503 in chips) 
+Seat 9: manon327 (10723 in chips) 
+Jackall23: posts small blind 50
+PokerStarMan123: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [9c Qd]
+Klemtonius: raises 100 to 200
+MaFak2019: calls 200
+manon327: calls 200
+color_singleton: calls 200
+Jackall23: calls 150
+PokerStarMan123: folds 
+*** FLOP *** [2d 9d 5s]
+Jackall23: checks 
+Klemtonius: bets 100
+MaFak2019: raises 400 to 500
+manon327: folds 
+color_singleton: folds 
+Jackall23: calls 500
+Klemtonius: calls 400
+*** TURN *** [2d 9d 5s] [Kc]
+Jackall23: checks 
+Klemtonius: checks 
+MaFak2019: bets 1000
+Jackall23: calls 1000
+Klemtonius: folds 
+*** RIVER *** [2d 9d 5s Kc] [2s]
+Jackall23: checks 
+MaFak2019: bets 1500
+Jackall23: folds 
+Uncalled bet (1500) returned to MaFak2019
+MaFak2019 collected 4347 from pot
+MaFak2019: doesn't show hand 
+*** SUMMARY ***
+Total pot 4600 | Rake 253 
+Board [2d 9d 5s Kc 2s]
+Seat 1: color_singleton (button) folded on the Flop
+Seat 2: Jackall23 (small blind) folded on the River
+Seat 3: PokerStarMan123 (big blind) folded before Flop
+Seat 4: Klemtonius folded on the Turn
+Seat 8: MaFak2019 collected (4347)
+Seat 9: manon327 folded on the Flop
+
+
+
+PokerStars Home Game Hand #226725523062: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:28:04 ET
+Table 'again and again' 9-max (Play Money) Seat #2 is the button
+Seat 1: color_singleton (10325 in chips) 
+Seat 2: Jackall23 (7100 in chips) 
+Seat 3: PokerStarMan123 (9900 in chips) 
+Seat 4: Klemtonius (9320 in chips) 
+Seat 8: MaFak2019 (12150 in chips) 
+Seat 9: manon327 (10523 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [7s 5d]
+MaFak2019: calls 100
+manon327: calls 100
+color_singleton: raises 300 to 400
+Jackall23: folds 
+PokerStarMan123: folds 
+Klemtonius: calls 300
+MaFak2019: folds 
+manon327: calls 300
+*** FLOP *** [5c 2s 9h]
+Klemtonius: bets 1276
+manon327: folds 
+color_singleton: folds 
+Uncalled bet (1276) returned to Klemtonius
+Klemtonius collected 1276 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1350 | Rake 74 
+Board [5c 2s 9h]
+Seat 1: color_singleton folded on the Flop
+Seat 2: Jackall23 (button) folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (small blind) folded before Flop
+Seat 4: Klemtonius (big blind) collected (1276)
+Seat 8: MaFak2019 folded before Flop
+Seat 9: manon327 folded on the Flop
+
+
+
+PokerStars Home Game Hand #226725546720: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:28:46 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (9925 in chips) 
+Seat 2: Jackall23 (7100 in chips) 
+Seat 3: PokerStarMan123 (9850 in chips) 
+Seat 4: Klemtonius (10196 in chips) 
+Seat 8: MaFak2019 (12050 in chips) 
+Seat 9: manon327 (10123 in chips) 
+Klemtonius: posts small blind 50
+MaFak2019: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [8h Qh]
+manon327: folds 
+color_singleton: folds 
+Jackall23: calls 100
+PokerStarMan123: calls 100
+Klemtonius: calls 50
+MaFak2019: checks 
+*** FLOP *** [Jd 4s 2s]
+Klemtonius: checks 
+MaFak2019: checks 
+Jackall23: bets 100
+PokerStarMan123: folds 
+Klemtonius: calls 100
+MaFak2019: calls 100
+*** TURN *** [Jd 4s 2s] [Jc]
+Klemtonius: checks 
+MaFak2019: checks 
+Jackall23: checks 
+*** RIVER *** [Jd 4s 2s Jc] [Td]
+Klemtonius: checks 
+MaFak2019: checks 
+Jackall23: checks 
+*** SHOW DOWN ***
+Klemtonius: shows [Ks 2d] (two pair, Jacks and Deuces)
+MaFak2019: shows [Qs 4c] (two pair, Jacks and Fours)
+Jackall23: mucks hand 
+MaFak2019 collected 661 from pot
+*** SUMMARY ***
+Total pot 700 | Rake 39 
+Board [Jd 4s 2s Jc Td]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 mucked [As Kh]
+Seat 3: PokerStarMan123 (button) folded on the Flop
+Seat 4: Klemtonius (small blind) showed [Ks 2d] and lost with two pair, Jacks and Deuces
+Seat 8: MaFak2019 (big blind) showed [Qs 4c] and won (661) with two pair, Jacks and Fours
+Seat 9: manon327 folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #226725583278: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:29:52 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (9925 in chips) 
+Seat 2: Jackall23 (6900 in chips) 
+Seat 3: PokerStarMan123 (9750 in chips) 
+Seat 4: Klemtonius (9996 in chips) 
+Seat 8: MaFak2019 (12511 in chips) 
+Seat 9: manon327 (10123 in chips) 
+MaFak2019: posts small blind 50
+manon327: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [2h 9h]
+color_singleton: folds 
+Jackall23: calls 100
+PokerStarMan123: calls 100
+Klemtonius: calls 100
+MaFak2019: calls 50
+manon327: checks 
+*** FLOP *** [8c Ac Ah]
+MaFak2019: checks 
+manon327: checks 
+Jackall23: checks 
+PokerStarMan123: checks 
+Klemtonius: checks 
+*** TURN *** [8c Ac Ah] [Th]
+MaFak2019: checks 
+manon327: checks 
+Jackall23: checks 
+PokerStarMan123: bets 200
+Klemtonius: folds 
+MaFak2019: folds 
+manon327: folds 
+Jackall23: folds 
+Uncalled bet (200) returned to PokerStarMan123
+PokerStarMan123 collected 472 from pot
+*** SUMMARY ***
+Total pot 500 | Rake 28 
+Board [8c Ac Ah Th]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 folded on the Turn
+Seat 3: PokerStarMan123 collected (472)
+Seat 4: Klemtonius (button) folded on the Turn
+Seat 8: MaFak2019 (small blind) folded on the Turn
+Seat 9: manon327 (big blind) folded on the Turn
+
+
+
+PokerStars Home Game Hand #226725619381: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:30:55 ET
+Table 'again and again' 9-max (Play Money) Seat #8 is the button
+Seat 1: color_singleton (9925 in chips) 
+Seat 2: Jackall23 (6800 in chips) 
+Seat 3: PokerStarMan123 (10122 in chips) 
+Seat 4: Klemtonius (9896 in chips) 
+Seat 8: MaFak2019 (12411 in chips) 
+Seat 9: manon327 (10023 in chips) 
+manon327: posts small blind 50
+color_singleton: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [4d 2s]
+Jackall23: calls 100
+PokerStarMan123: folds 
+Klemtonius: calls 100
+MaFak2019: calls 100
+manon327: calls 50
+color_singleton: raises 300 to 400
+Jackall23: calls 300
+Klemtonius: calls 300
+MaFak2019: calls 300
+manon327: folds 
+*** FLOP *** [5s 3d Jh]
+color_singleton: bets 1606
+Jackall23: folds 
+Klemtonius: calls 1606
+MaFak2019: folds 
+*** TURN *** [5s 3d Jh] [Qs]
+color_singleton: checks 
+Klemtonius: bets 4642
+color_singleton: raises 3277 to 7919 and is all-in
+Klemtonius: calls 3248 and is all-in
+Uncalled bet (29) returned to color_singleton
+*** RIVER *** [5s 3d Jh Qs] [Ts]
+*** SHOW DOWN ***
+color_singleton: shows [Qd Jc] (two pair, Queens and Jacks)
+Klemtonius: shows [Js 7s] (a flush, Queen high)
+Klemtonius collected 19554 from pot
+*** SUMMARY ***
+Total pot 20692 | Rake 1138 
+Board [5s 3d Jh Qs Ts]
+Seat 1: color_singleton (big blind) showed [Qd Jc] and lost with two pair, Queens and Jacks
+Seat 2: Jackall23 folded on the Flop
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius showed [Js 7s] and won (19554) with a flush, Queen high
+Seat 8: MaFak2019 (button) folded on the Flop
+Seat 9: manon327 (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #226725661918: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:32:09 ET
+Table 'again and again' 9-max (Play Money) Seat #9 is the button
+Seat 2: Jackall23 (6400 in chips) 
+Seat 3: PokerStarMan123 (10122 in chips) 
+Seat 4: Klemtonius (19554 in chips) 
+Seat 8: MaFak2019 (12011 in chips) 
+Seat 9: manon327 (9923 in chips) 
+Jackall23: posts small blind 50
+PokerStarMan123: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Kd 4d]
+Klemtonius: raises 100 to 200
+MaFak2019: calls 200
+manon327: calls 200
+Jackall23: folds 
+PokerStarMan123: calls 100
+*** FLOP *** [As 3c 4c]
+PokerStarMan123: checks 
+Klemtonius: checks 
+MaFak2019: bets 500
+manon327: folds 
+PokerStarMan123: folds 
+Klemtonius: folds 
+Uncalled bet (500) returned to MaFak2019
+MaFak2019 collected 803 from pot
+MaFak2019: doesn't show hand 
+*** SUMMARY ***
+Total pot 850 | Rake 47 
+Board [As 3c 4c]
+Seat 2: Jackall23 (small blind) folded before Flop
+Seat 3: PokerStarMan123 (big blind) folded on the Flop
+Seat 4: Klemtonius folded on the Flop
+Seat 8: MaFak2019 collected (803)
+Seat 9: manon327 (button) folded on the Flop
+
+
+
+PokerStars Home Game Hand #226725697856: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:33:09 ET
+Table 'again and again' 9-max (Play Money) Seat #2 is the button
+Seat 1: color_singleton (10000 in chips) 
+Seat 2: Jackall23 (6350 in chips) 
+Seat 3: PokerStarMan123 (9922 in chips) 
+Seat 4: Klemtonius (19354 in chips) 
+Seat 8: MaFak2019 (12614 in chips) 
+Seat 9: manon327 (9723 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+color_singleton: posts small blind 50
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [5h 8d]
+MaFak2019: folds 
+manon327: calls 100
+color_singleton: calls 100
+Jackall23: calls 100
+PokerStarMan123: calls 50
+Klemtonius: checks 
+*** FLOP *** [2s 8h Js]
+PokerStarMan123: bets 260
+Klemtonius: folds 
+manon327: folds 
+color_singleton: calls 260
+Jackall23: folds 
+*** TURN *** [2s 8h Js] [5c]
+PokerStarMan123: bets 600
+color_singleton: calls 600
+*** RIVER *** [2s 8h Js 5c] [Ac]
+PokerStarMan123: bets 1100
+color_singleton: folds 
+Uncalled bet (1100) returned to PokerStarMan123
+PokerStarMan123 collected 2145 from pot
+*** SUMMARY ***
+Total pot 2270 | Rake 125 
+Board [2s 8h Js 5c Ac]
+Seat 1: color_singleton folded on the River
+Seat 2: Jackall23 (button) folded on the Flop
+Seat 3: PokerStarMan123 (small blind) collected (2145)
+Seat 4: Klemtonius (big blind) folded on the Flop
+Seat 8: MaFak2019 folded before Flop (didn't bet)
+Seat 9: manon327 folded on the Flop
+
+
+
+PokerStars Home Game Hand #226725729734: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:34:05 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (8990 in chips) 
+Seat 2: Jackall23 (6250 in chips) 
+Seat 3: PokerStarMan123 (11107 in chips) 
+Seat 4: Klemtonius (19254 in chips) 
+Seat 8: MaFak2019 (12614 in chips) 
+Seat 9: manon327 (9623 in chips) 
+Klemtonius: posts small blind 50
+MaFak2019: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [7s 2h]
+manon327: folds 
+color_singleton: folds 
+Jackall23: folds 
+PokerStarMan123: folds 
+Klemtonius: calls 50
+MaFak2019: raises 400 to 500
+Klemtonius: calls 400
+*** FLOP *** [5h 3s 9h]
+Klemtonius: bets 945
+MaFak2019: folds 
+Uncalled bet (945) returned to Klemtonius
+Klemtonius collected 945 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1000 | Rake 55 
+Board [5h 3s 9h]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (button) folded before Flop (didn't bet)
+Seat 4: Klemtonius (small blind) collected (945)
+Seat 8: MaFak2019 (big blind) folded on the Flop
+Seat 9: manon327 folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #226725757817: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:34:53 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (8990 in chips) 
+Seat 2: Jackall23 (6250 in chips) 
+Seat 3: PokerStarMan123 (11107 in chips) 
+Seat 4: Klemtonius (19699 in chips) 
+color_singleton: posts small blind 50
+Jackall23: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Ad 2h]
+PokerStarMan123: raises 200 to 300
+Klemtonius: raises 200 to 500
+color_singleton: calls 450
+Jackall23: calls 400
+PokerStarMan123: calls 200
+*** FLOP *** [8s 5s 2s]
+color_singleton: bets 1890
+Jackall23: folds 
+PokerStarMan123: folds 
+Klemtonius: folds 
+Uncalled bet (1890) returned to color_singleton
+color_singleton collected 1890 from pot
+color_singleton: doesn't show hand 
+*** SUMMARY ***
+Total pot 2000 | Rake 110 
+Board [8s 5s 2s]
+Seat 1: color_singleton (small blind) collected (1890)
+Seat 2: Jackall23 (big blind) folded on the Flop
+Seat 3: PokerStarMan123 folded on the Flop
+Seat 4: Klemtonius (button) folded on the Flop
+
+
+
+PokerStars Home Game Hand #226725783700: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:35:38 ET
+Table 'again and again' 9-max (Play Money) Seat #1 is the button
+Seat 1: color_singleton (10380 in chips) 
+Seat 2: Jackall23 (5750 in chips) 
+Seat 3: PokerStarMan123 (10607 in chips) 
+Seat 4: Klemtonius (19199 in chips) 
+Jackall23: posts small blind 50
+PokerStarMan123: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [8h Kd]
+Klemtonius: raises 100 to 200
+color_singleton: folds 
+Jackall23: folds 
+PokerStarMan123: calls 100
+*** FLOP *** [2d 6h Qc]
+PokerStarMan123: checks 
+Klemtonius: bets 425
+PokerStarMan123: folds 
+Uncalled bet (425) returned to Klemtonius
+Klemtonius collected 425 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 450 | Rake 25 
+Board [2d 6h Qc]
+Seat 1: color_singleton (button) folded before Flop (didn't bet)
+Seat 2: Jackall23 (small blind) folded before Flop
+Seat 3: PokerStarMan123 (big blind) folded on the Flop
+Seat 4: Klemtonius collected (425)
+
+
+
+PokerStars Home Game Hand #226725796558: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:36:01 ET
+Table 'again and again' 9-max (Play Money) Seat #2 is the button
+Seat 1: color_singleton (10380 in chips) 
+Seat 2: Jackall23 (5700 in chips) 
+Seat 3: PokerStarMan123 (10407 in chips) 
+Seat 4: Klemtonius (19424 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [7c 6d]
+color_singleton: folds 
+Jackall23: calls 100
+PokerStarMan123: calls 50
+Klemtonius: checks 
+*** FLOP *** [4h 7d 5h]
+PokerStarMan123: bets 200
+Klemtonius: folds 
+Jackall23: raises 200 to 400
+PokerStarMan123: calls 200
+*** TURN *** [4h 7d 5h] [2h]
+PokerStarMan123: checks 
+Jackall23: bets 519
+PokerStarMan123: calls 519
+*** RIVER *** [4h 7d 5h 2h] [Ah]
+PokerStarMan123: checks 
+Jackall23: bets 2020
+PokerStarMan123: folds 
+Uncalled bet (2020) returned to Jackall23
+Jackall23 collected 2020 from pot
+*** SUMMARY ***
+Total pot 2138 | Rake 118 
+Board [4h 7d 5h 2h Ah]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 (button) collected (2020)
+Seat 3: PokerStarMan123 (small blind) folded on the River
+Seat 4: Klemtonius (big blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #226725829445: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:36:58 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (10380 in chips) 
+Seat 2: Jackall23 (6701 in chips) 
+Seat 3: PokerStarMan123 (9388 in chips) 
+Seat 4: Klemtonius (19324 in chips) 
+Klemtonius: posts small blind 50
+color_singleton: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Kd Ad]
+Jackall23: calls 100
+PokerStarMan123: raises 300 to 400
+Klemtonius: calls 350
+color_singleton: folds 
+Jackall23: calls 300
+*** FLOP *** [9s Qs Tc]
+Klemtonius: bets 1228
+Jackall23: folds 
+PokerStarMan123: folds 
+Uncalled bet (1228) returned to Klemtonius
+Klemtonius collected 1228 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1300 | Rake 72 
+Board [9s Qs Tc]
+Seat 1: color_singleton (big blind) folded before Flop
+Seat 2: Jackall23 folded on the Flop
+Seat 3: PokerStarMan123 (button) folded on the Flop
+Seat 4: Klemtonius (small blind) collected (1228)
+
+
+
+PokerStars Home Game Hand #226725849541: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:37:33 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (10280 in chips) 
+Seat 2: Jackall23 (6301 in chips) 
+Seat 3: PokerStarMan123 (8988 in chips) 
+Seat 4: Klemtonius (20152 in chips) 
+color_singleton: posts small blind 50
+Jackall23: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [2h 3c]
+PokerStarMan123: folds 
+Klemtonius: raises 100 to 200
+color_singleton: calls 150
+Jackall23: folds 
+*** FLOP *** [6d 3s Jh]
+color_singleton: bets 236
+Klemtonius: folds 
+Uncalled bet (236) returned to color_singleton
+color_singleton collected 472 from pot
+color_singleton: doesn't show hand 
+*** SUMMARY ***
+Total pot 500 | Rake 28 
+Board [6d 3s Jh]
+Seat 1: color_singleton (small blind) collected (472)
+Seat 2: Jackall23 (big blind) folded before Flop
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius (button) folded on the Flop
+
+
+
+PokerStars Home Game Hand #226725867749: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:38:05 ET
+Table 'again and again' 9-max (Play Money) Seat #1 is the button
+Seat 1: color_singleton (10552 in chips) 
+Seat 2: Jackall23 (6201 in chips) 
+Seat 3: PokerStarMan123 (8988 in chips) 
+Seat 4: Klemtonius (19952 in chips) 
+Jackall23: posts small blind 50
+PokerStarMan123: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [9h Kh]
+Klemtonius: raises 100 to 200
+color_singleton: calls 200
+Jackall23: calls 150
+PokerStarMan123: calls 100
+*** FLOP *** [3s 8s 7h]
+Jackall23: checks 
+PokerStarMan123: checks 
+Klemtonius: checks 
+color_singleton: bets 378
+Jackall23: folds 
+PokerStarMan123: folds 
+Klemtonius: folds 
+Uncalled bet (378) returned to color_singleton
+color_singleton collected 756 from pot
+color_singleton: doesn't show hand 
+*** SUMMARY ***
+Total pot 800 | Rake 44 
+Board [3s 8s 7h]
+Seat 1: color_singleton (button) collected (756)
+Seat 2: Jackall23 (small blind) folded on the Flop
+Seat 3: PokerStarMan123 (big blind) folded on the Flop
+Seat 4: Klemtonius folded on the Flop
+
+
+
+PokerStars Home Game Hand #226725889509: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:38:42 ET
+Table 'again and again' 9-max (Play Money) Seat #2 is the button
+Seat 1: color_singleton (11108 in chips) 
+Seat 2: Jackall23 (6001 in chips) 
+Seat 3: PokerStarMan123 (8788 in chips) 
+Seat 4: Klemtonius (19752 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Ks 6h]
+color_singleton: folds 
+Jackall23: calls 100
+PokerStarMan123: calls 50
+Klemtonius: raises 300 to 400
+Jackall23: calls 300
+PokerStarMan123: folds 
+*** FLOP *** [8s Qh 4d]
+Klemtonius: checks 
+Jackall23: checks 
+*** TURN *** [8s Qh 4d] [Kh]
+Klemtonius: checks 
+Jackall23: checks 
+*** RIVER *** [8s Qh 4d Kh] [5d]
+Klemtonius: checks 
+Jackall23: bets 425
+Klemtonius: folds 
+Uncalled bet (425) returned to Jackall23
+Jackall23 collected 850 from pot
+*** SUMMARY ***
+Total pot 900 | Rake 50 
+Board [8s Qh 4d Kh 5d]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 (button) collected (850)
+Seat 3: PokerStarMan123 (small blind) folded before Flop
+Seat 4: Klemtonius (big blind) folded on the River
+
+
+
+PokerStars Home Game Hand #226725923503: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:39:34 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (11108 in chips) 
+Seat 2: Jackall23 (6451 in chips) 
+Seat 3: PokerStarMan123 (8688 in chips) 
+Seat 4: Klemtonius (19352 in chips) 
+Klemtonius: posts small blind 50
+color_singleton: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [4c Jd]
+Jackall23: calls 100
+PokerStarMan123: folds 
+Klemtonius: calls 50
+color_singleton: checks 
+*** FLOP *** [5d 5c Kc]
+Klemtonius: checks 
+color_singleton: checks 
+Jackall23: checks 
+*** TURN *** [5d 5c Kc] [Ad]
+Klemtonius: bets 141
+color_singleton: folds 
+Jackall23: raises 141 to 282
+Klemtonius: calls 141
+*** RIVER *** [5d 5c Kc Ad] [2d]
+Klemtonius: checks 
+Jackall23: bets 408
+Klemtonius: raises 408 to 816
+Jackall23: calls 408
+*** SHOW DOWN ***
+Klemtonius: shows [Td 5s] (three of a kind, Fives)
+Jackall23: mucks hand 
+Klemtonius collected 2359 from pot
+*** SUMMARY ***
+Total pot 2496 | Rake 137 
+Board [5d 5c Kc Ad 2d]
+Seat 1: color_singleton (big blind) folded on the Turn
+Seat 2: Jackall23 mucked [9s Ac]
+Seat 3: PokerStarMan123 (button) folded before Flop (didn't bet)
+Seat 4: Klemtonius (small blind) showed [Td 5s] and won (2359) with three of a kind, Fives
+
+
+
+PokerStars Home Game Hand #226725948685: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:40:17 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (11008 in chips) 
+Seat 2: Jackall23 (5253 in chips) 
+Seat 3: PokerStarMan123 (8688 in chips) 
+Seat 4: Klemtonius (20513 in chips) 
+color_singleton: posts small blind 50
+Jackall23: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [5d 8c]
+PokerStarMan123: folds 
+Klemtonius: calls 100
+color_singleton: calls 50
+Jackall23: checks 
+*** FLOP *** [Tc Ts 9h]
+color_singleton: checks 
+Jackall23: checks 
+Klemtonius: checks 
+*** TURN *** [Tc Ts 9h] [2h]
+color_singleton: checks 
+Jackall23: checks 
+Klemtonius: checks 
+*** RIVER *** [Tc Ts 9h 2h] [Ad]
+color_singleton: checks 
+Jackall23: bets 100
+Klemtonius: folds 
+color_singleton: folds 
+Uncalled bet (100) returned to Jackall23
+Jackall23 collected 283 from pot
+*** SUMMARY ***
+Total pot 300 | Rake 17 
+Board [Tc Ts 9h 2h Ad]
+Seat 1: color_singleton (small blind) folded on the River
+Seat 2: Jackall23 (big blind) collected (283)
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius (button) folded on the River
+
+
+
+PokerStars Home Game Hand #226725975251: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:41:04 ET
+Table 'again and again' 9-max (Play Money) Seat #1 is the button
+Seat 1: color_singleton (10908 in chips) 
+Seat 2: Jackall23 (5436 in chips) 
+Seat 3: PokerStarMan123 (8688 in chips) 
+Seat 4: Klemtonius (20413 in chips) 
+Jackall23: posts small blind 50
+PokerStarMan123: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [7s 3h]
+Klemtonius: calls 100
+color_singleton: calls 100
+Jackall23: calls 50
+PokerStarMan123: checks 
+*** FLOP *** [6s Kd 3d]
+Jackall23: checks 
+PokerStarMan123: checks 
+Klemtonius: checks 
+color_singleton: checks 
+*** TURN *** [6s Kd 3d] [Jh]
+Jackall23: checks 
+PokerStarMan123: checks 
+Klemtonius: checks 
+color_singleton: checks 
+*** RIVER *** [6s Kd 3d Jh] [3s]
+Jackall23: checks 
+PokerStarMan123: bets 600
+Klemtonius: folds 
+color_singleton: folds 
+Jackall23: folds 
+Uncalled bet (600) returned to PokerStarMan123
+PokerStarMan123 collected 378 from pot
+*** SUMMARY ***
+Total pot 400 | Rake 22 
+Board [6s Kd 3d Jh 3s]
+Seat 1: color_singleton (button) folded on the River
+Seat 2: Jackall23 (small blind) folded on the River
+Seat 3: PokerStarMan123 (big blind) collected (378)
+Seat 4: Klemtonius folded on the River
+
+
+
+PokerStars Home Game Hand #226726004996: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:41:55 ET
+Table 'again and again' 9-max (Play Money) Seat #2 is the button
+Seat 1: color_singleton (10808 in chips) 
+Seat 2: Jackall23 (5336 in chips) 
+Seat 3: PokerStarMan123 (8966 in chips) 
+Seat 4: Klemtonius (20313 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [9s 4c]
+color_singleton: raises 200 to 300
+Jackall23: folds 
+PokerStarMan123: folds 
+Klemtonius: calls 200
+*** FLOP *** [3h 3d Td]
+Klemtonius: bets 614
+color_singleton: calls 614
+*** TURN *** [3h 3d Td] [2s]
+Klemtonius: bets 1775
+color_singleton: calls 1775
+*** RIVER *** [3h 3d Td 2s] [2h]
+Klemtonius: checks 
+color_singleton: checks 
+*** SHOW DOWN ***
+Klemtonius: shows [Qd 2d] (a full house, Deuces full of Threes)
+color_singleton: mucks hand 
+Klemtonius collected 5129 from pot
+*** SUMMARY ***
+Total pot 5428 | Rake 299 
+Board [3h 3d Td 2s 2h]
+Seat 1: color_singleton mucked [Ad 4d]
+Seat 2: Jackall23 (button) folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (small blind) folded before Flop
+Seat 4: Klemtonius (big blind) showed [Qd 2d] and won (5129) with a full house, Deuces full of Threes
+
+
+
+PokerStars Home Game Hand #226726029745: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:42:38 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (8119 in chips) 
+Seat 2: Jackall23 (5336 in chips) 
+Seat 3: PokerStarMan123 (8916 in chips) 
+Seat 4: Klemtonius (22753 in chips) 
+Klemtonius: posts small blind 50
+color_singleton: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [5d 2h]
+Jackall23: calls 100
+PokerStarMan123: folds 
+Klemtonius: calls 50
+color_singleton: checks 
+*** FLOP *** [Ks Td 8s]
+Klemtonius: checks 
+color_singleton: bets 141
+Jackall23: folds 
+Klemtonius: folds 
+Uncalled bet (141) returned to color_singleton
+color_singleton collected 283 from pot
+color_singleton: doesn't show hand 
+*** SUMMARY ***
+Total pot 300 | Rake 17 
+Board [Ks Td 8s]
+Seat 1: color_singleton (big blind) collected (283)
+Seat 2: Jackall23 folded on the Flop
+Seat 3: PokerStarMan123 (button) folded before Flop (didn't bet)
+Seat 4: Klemtonius (small blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #226726048211: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:43:11 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (8302 in chips) 
+Seat 2: Jackall23 (5236 in chips) 
+Seat 3: PokerStarMan123 (8916 in chips) 
+Seat 4: Klemtonius (22653 in chips) 
+color_singleton: posts small blind 50
+Jackall23: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Td Kc]
+PokerStarMan123: raises 300 to 400
+Klemtonius: raises 300 to 700
+color_singleton has timed out
+color_singleton: folds 
+Jackall23: folds 
+PokerStarMan123: calls 300
+*** FLOP *** [Qs 8s 5s]
+PokerStarMan123: checks 
+Klemtonius: bets 1465
+PokerStarMan123: folds 
+Uncalled bet (1465) returned to Klemtonius
+Klemtonius collected 1465 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1550 | Rake 85 
+Board [Qs 8s 5s]
+Seat 1: color_singleton (small blind) folded before Flop
+Seat 2: Jackall23 (big blind) folded before Flop
+Seat 3: PokerStarMan123 folded on the Flop
+Seat 4: Klemtonius (button) collected (1465)
+
+
+
+PokerStars Home Game Hand #226726071199: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:43:51 ET
+Table 'again and again' 9-max (Play Money) Seat #1 is the button
+Seat 1: color_singleton (8252 in chips) 
+Seat 2: Jackall23 (5136 in chips) 
+Seat 3: PokerStarMan123 (8216 in chips) 
+Seat 4: Klemtonius (23418 in chips) 
+Seat 8: MaFak2019 (12114 in chips) 
+Seat 9: manon327 (9623 in chips) 
+Jackall23: posts small blind 50
+PokerStarMan123: posts big blind 100
+MaFak2019: posts small & big blinds 150
+manon327: posts small & big blinds 150
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Kc Js]
+Klemtonius: raises 100 to 200
+MaFak2019: calls 100
+manon327: calls 100
+color_singleton: calls 200
+Jackall23: folds 
+PokerStarMan123: calls 100
+*** FLOP *** [Ac 9h Ks]
+PokerStarMan123: checks 
+Klemtonius: bets 1087
+MaFak2019: folds 
+manon327: folds 
+color_singleton: folds 
+PokerStarMan123: folds 
+Uncalled bet (1087) returned to Klemtonius
+Klemtonius collected 1087 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1150 | Rake 63 
+Board [Ac 9h Ks]
+Seat 1: color_singleton (button) folded on the Flop
+Seat 2: Jackall23 (small blind) folded before Flop
+Seat 3: PokerStarMan123 (big blind) folded on the Flop
+Seat 4: Klemtonius collected (1087)
+Seat 8: MaFak2019 folded on the Flop
+Seat 9: manon327 folded on the Flop
+
+
+
+PokerStars Home Game Hand #226726086677: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:44:18 ET
+Table 'again and again' 9-max (Play Money) Seat #2 is the button
+Seat 1: color_singleton (8052 in chips) 
+Seat 2: Jackall23 (5086 in chips) 
+Seat 3: PokerStarMan123 (8016 in chips) 
+Seat 4: Klemtonius (24305 in chips) 
+Seat 8: MaFak2019 (11864 in chips) 
+Seat 9: manon327 (9373 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [9s 5c]
+MaFak2019: calls 100
+manon327: calls 100
+color_singleton: folds 
+Jackall23: folds 
+PokerStarMan123: calls 50
+Klemtonius: raises 400 to 500
+MaFak2019: calls 400
+manon327: folds 
+PokerStarMan123: folds 
+*** FLOP *** [7d Js Ah]
+Klemtonius: bets 1134
+MaFak2019: folds 
+Uncalled bet (1134) returned to Klemtonius
+Klemtonius collected 1134 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1200 | Rake 66 
+Board [7d Js Ah]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 (button) folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (small blind) folded before Flop
+Seat 4: Klemtonius (big blind) collected (1134)
+Seat 8: MaFak2019 folded on the Flop
+Seat 9: manon327 folded before Flop
+
+
+
+PokerStars Home Game Hand #226726105030: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:44:51 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (8052 in chips) 
+Seat 2: Jackall23 (5086 in chips) 
+Seat 3: PokerStarMan123 (7916 in chips) 
+Seat 4: Klemtonius (24939 in chips) 
+Seat 8: MaFak2019 (11364 in chips) 
+Seat 9: manon327 (9273 in chips) 
+Klemtonius: posts small blind 50
+MaFak2019: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Kc 6d]
+manon327: folds 
+color_singleton: raises 300 to 400
+Jackall23: folds 
+PokerStarMan123: folds 
+Klemtonius: folds 
+MaFak2019: folds 
+Uncalled bet (300) returned to color_singleton
+color_singleton collected 250 from pot
+color_singleton: doesn't show hand 
+*** SUMMARY ***
+Total pot 250 | Rake 0 
+Seat 1: color_singleton collected (250)
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (button) folded before Flop (didn't bet)
+Seat 4: Klemtonius (small blind) folded before Flop
+Seat 8: MaFak2019 (big blind) folded before Flop
+Seat 9: manon327 folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #226726132612: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:45:39 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (8202 in chips) 
+Seat 2: Jackall23 (5086 in chips) 
+Seat 3: PokerStarMan123 (7916 in chips) 
+Seat 4: Klemtonius (24889 in chips) 
+Seat 8: MaFak2019 (11264 in chips) 
+Seat 9: manon327 (9273 in chips) 
+MaFak2019: posts small blind 50
+manon327: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [3h Kh]
+color_singleton: raises 200 to 300
+Jackall23: calls 300
+PokerStarMan123: folds 
+Klemtonius: folds 
+MaFak2019: calls 250
+manon327: folds 
+*** FLOP *** [Tc 8c 3c]
+MaFak2019: checks 
+color_singleton: checks 
+Jackall23: checks 
+*** TURN *** [Tc 8c 3c] [6s]
+MaFak2019: checks 
+color_singleton: checks 
+Jackall23: checks 
+*** RIVER *** [Tc 8c 3c 6s] [9c]
+MaFak2019: checks 
+color_singleton: checks 
+Jackall23: checks 
+*** SHOW DOWN ***
+MaFak2019: shows [7d 6c] (a flush, Ten high)
+color_singleton: mucks hand 
+Jackall23: mucks hand 
+MaFak2019 collected 945 from pot
+*** SUMMARY ***
+Total pot 1000 | Rake 55 
+Board [Tc 8c 3c 6s 9c]
+Seat 1: color_singleton mucked [Qd Kd]
+Seat 2: Jackall23 mucked [6h Qh]
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius (button) folded before Flop (didn't bet)
+Seat 8: MaFak2019 (small blind) showed [7d 6c] and won (945) with a flush, Ten high
+Seat 9: manon327 (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #226726166418: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:46:38 ET
+Table 'again and again' 9-max (Play Money) Seat #8 is the button
+Seat 1: color_singleton (7902 in chips) 
+Seat 2: Jackall23 (4786 in chips) 
+Seat 3: PokerStarMan123 (7916 in chips) 
+Seat 4: Klemtonius (24889 in chips) 
+Seat 8: MaFak2019 (11909 in chips) 
+Seat 9: manon327 (9173 in chips) 
+manon327: posts small blind 50
+color_singleton: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [6d 3h]
+Jackall23: folds 
+PokerStarMan123: folds 
+Klemtonius: raises 100 to 200
+MaFak2019: calls 200
+manon327: calls 150
+color_singleton: raises 300 to 500
+Klemtonius: calls 300
+MaFak2019: calls 300
+manon327: calls 300
+*** FLOP *** [5s Ts 7c]
+manon327: bets 945
+color_singleton: raises 945 to 1890
+Klemtonius: folds 
+MaFak2019: folds 
+manon327: calls 945
+*** TURN *** [5s Ts 7c] [Ks]
+manon327: checks 
+color_singleton: checks 
+*** RIVER *** [5s Ts 7c Ks] [2d]
+manon327: bets 2731
+color_singleton: calls 2731
+*** SHOW DOWN ***
+manon327: shows [7s 7d] (three of a kind, Sevens)
+color_singleton: mucks hand 
+manon327 collected 10624 from pot
+*** SUMMARY ***
+Total pot 11242 | Rake 618 
+Board [5s Ts 7c Ks 2d]
+Seat 1: color_singleton (big blind) mucked [Ah Ac]
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius folded on the Flop
+Seat 8: MaFak2019 (button) folded on the Flop
+Seat 9: manon327 (small blind) showed [7s 7d] and won (10624) with three of a kind, Sevens
+
+
+
+PokerStars Home Game Hand #226726199443: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:47:34 ET
+Table 'again and again' 9-max (Play Money) Seat #9 is the button
+Seat 1: color_singleton (2781 in chips) 
+Seat 2: Jackall23 (4786 in chips) 
+Seat 3: PokerStarMan123 (7916 in chips) 
+Seat 4: Klemtonius (24389 in chips) 
+Seat 8: MaFak2019 (11409 in chips) 
+Seat 9: manon327 (14676 in chips) 
+color_singleton: posts small blind 50
+Jackall23: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Qs 7h]
+PokerStarMan123: folds 
+Klemtonius: raises 100 to 200
+MaFak2019: raises 200 to 400
+manon327: calls 400
+color_singleton: folds 
+Jackall23: calls 300
+Klemtonius: calls 200
+*** FLOP *** [2d Js 5c]
+Jackall23: bets 779
+Klemtonius: folds 
+MaFak2019: raises 779 to 1558
+manon327: folds 
+Jackall23: raises 779 to 2337
+MaFak2019: raises 779 to 3116
+Jackall23: raises 1270 to 4386 and is all-in
+MaFak2019: calls 1270
+*** TURN *** [2d Js 5c] [4s]
+*** RIVER *** [2d Js 5c 4s] [3c]
+*** SHOW DOWN ***
+Jackall23: shows [Ks Jd] (a pair of Jacks)
+MaFak2019: shows [5d 5h] (three of a kind, Fives)
+MaFak2019 collected 9849 from pot
+*** SUMMARY ***
+Total pot 10422 | Rake 573 
+Board [2d Js 5c 4s 3c]
+Seat 1: color_singleton (small blind) folded before Flop
+Seat 2: Jackall23 (big blind) showed [Ks Jd] and lost with a pair of Jacks
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius folded on the Flop
+Seat 8: MaFak2019 showed [5d 5h] and won (9849) with three of a kind, Fives
+Seat 9: manon327 (button) folded on the Flop
+
+
+
+PokerStars Home Game Hand #226726228900: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:48:26 ET
+Table 'again and again' 9-max (Play Money) Seat #1 is the button
+Seat 1: color_singleton (2731 in chips) 
+Seat 3: PokerStarMan123 (7916 in chips) 
+Seat 4: Klemtonius (23989 in chips) 
+Seat 8: MaFak2019 (16472 in chips) 
+Seat 9: manon327 (14276 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Jc 7h]
+MaFak2019: calls 100
+manon327: folds 
+color_singleton: folds 
+PokerStarMan123: calls 50
+Klemtonius: raises 300 to 400
+MaFak2019: calls 300
+PokerStarMan123: folds 
+*** FLOP *** [Ah Kh Qc]
+Klemtonius: bets 425
+MaFak2019: calls 425
+*** TURN *** [Ah Kh Qc] [8c]
+Klemtonius: bets 1654
+MaFak2019: folds 
+Uncalled bet (1654) returned to Klemtonius
+Klemtonius collected 1654 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1750 | Rake 96 
+Board [Ah Kh Qc 8c]
+Seat 1: color_singleton (button) folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (small blind) folded before Flop
+Seat 4: Klemtonius (big blind) collected (1654)
+Seat 8: MaFak2019 folded on the Turn
+Seat 9: manon327 folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #226726266113: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:49:32 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (2731 in chips) 
+Seat 2: Jackall23 (10000 in chips) 
+Seat 3: PokerStarMan123 (7816 in chips) 
+Seat 4: Klemtonius (24818 in chips) 
+Seat 8: MaFak2019 (15647 in chips) 
+Seat 9: manon327 (14276 in chips) 
+Klemtonius: posts small blind 50
+MaFak2019: posts big blind 100
+Jackall23: posts small blind 50
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Ah 8h]
+manon327: calls 100
+color_singleton: raises 400 to 500
+Jackall23: folds 
+PokerStarMan123: calls 500
+Klemtonius: folds 
+MaFak2019: calls 400
+manon327: calls 400
+*** FLOP *** [Jc 4c As]
+MaFak2019: bets 1200
+manon327: calls 1200
+color_singleton: calls 1200
+PokerStarMan123: calls 1200
+*** TURN *** [Jc 4c As] [Jd]
+MaFak2019: bets 3947
+manon327: folds 
+color_singleton: folds 
+PokerStarMan123: calls 3947
+*** RIVER *** [Jc 4c As Jd] [3h]
+MaFak2019: bets 10000 and is all-in
+PokerStarMan123: calls 2169 and is all-in
+Uncalled bet (7831) returned to MaFak2019
+*** SHOW DOWN ***
+MaFak2019: shows [4d 4h] (a full house, Fours full of Jacks)
+PokerStarMan123: shows [Ah 8h] (two pair, Aces and Jacks)
+MaFak2019 collected 18080 from pot
+*** SUMMARY ***
+Total pot 19132 | Rake 1052 
+Board [Jc 4c As Jd 3h]
+Seat 1: color_singleton folded on the Turn
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (button) showed [Ah 8h] and lost with two pair, Aces and Jacks
+Seat 4: Klemtonius (small blind) folded before Flop
+Seat 8: MaFak2019 (big blind) showed [4d 4h] and won (18080) with a full house, Fours full of Jacks
+Seat 9: manon327 folded on the Turn
+
+
+
+PokerStars Home Game Hand #226726411787: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:53:40 ET
+Table 'again and again' 9-max (Play Money) Seat #1 is the button
+Seat 1: color_singleton (2665 in chips) 
+Seat 2: Jackall23 (4224 in chips) 
+Seat 3: PokerStarMan123 (9391 in chips) 
+Seat 4: Klemtonius (28392 in chips) 
+Seat 8: MaFak2019 (25792 in chips) 
+Seat 9: manon327 (12126 in chips) 
+Jackall23: posts small blind 50
+PokerStarMan123: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [2d 6c]
+Klemtonius: folds 
+MaFak2019: calls 100
+manon327: calls 100
+color_singleton: calls 100
+Jackall23: folds 
+PokerStarMan123: checks 
+*** FLOP *** [Jh Qd 4d]
+PokerStarMan123: checks 
+MaFak2019: checks 
+manon327: checks 
+color_singleton: checks 
+*** TURN *** [Jh Qd 4d] [Qs]
+PokerStarMan123: checks 
+MaFak2019: bets 600
+manon327: folds 
+color_singleton: folds 
+PokerStarMan123 has timed out
+PokerStarMan123: folds 
+Uncalled bet (600) returned to MaFak2019
+MaFak2019 collected 425 from pot
+MaFak2019: doesn't show hand 
+*** SUMMARY ***
+Total pot 450 | Rake 25 
+Board [Jh Qd 4d Qs]
+Seat 1: color_singleton (button) folded on the Turn
+Seat 2: Jackall23 (small blind) folded before Flop
+Seat 3: PokerStarMan123 (big blind) folded on the Turn
+Seat 4: Klemtonius folded before Flop (didn't bet)
+Seat 8: MaFak2019 collected (425)
+Seat 9: manon327 folded on the Turn
+
+
+
+PokerStars Home Game Hand #226726461968: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:55:12 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (2565 in chips) 
+Seat 2: Jackall23 (4174 in chips) 
+Seat 3: PokerStarMan123 (9291 in chips) 
+Seat 4: Klemtonius (28570 in chips) 
+Seat 8: MaFak2019 (25917 in chips) 
+Seat 9: manon327 (12026 in chips) 
+MaFak2019: posts small blind 50
+manon327: posts big blind 100
+PokerStarMan123: posts small blind 50
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Qc 7h]
+color_singleton: folds 
+Jackall23: raises 100 to 200
+PokerStarMan123: folds 
+Klemtonius: raises 100 to 300
+MaFak2019: calls 250
+manon327: folds 
+Jackall23: raises 100 to 400
+Klemtonius: calls 100
+MaFak2019: calls 100
+*** FLOP *** [5c Td 8c]
+MaFak2019: checks 
+Jackall23: bets 1276
+Klemtonius: folds 
+MaFak2019: calls 1276
+*** TURN *** [5c Td 8c] [7d]
+MaFak2019: checks 
+Jackall23: bets 2498 and is all-in
+MaFak2019: calls 2498
+*** RIVER *** [5c Td 8c 7d] [2c]
+*** SHOW DOWN ***
+MaFak2019: shows [8d Qd] (a pair of Eights)
+Jackall23: shows [Kh Kd] (a pair of Kings)
+Jackall23 collected 8409 from pot
+*** SUMMARY ***
+Total pot 8898 | Rake 489 
+Board [5c Td 8c 7d 2c]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 showed [Kh Kd] and won (8409) with a pair of Kings
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius (button) folded on the Flop
+Seat 8: MaFak2019 (small blind) showed [8d Qd] and lost with a pair of Eights
+Seat 9: manon327 (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #226726491538: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:56:29 ET
+Table 'again and again' 9-max (Play Money) Seat #8 is the button
+Seat 1: color_singleton (2565 in chips) 
+Seat 2: Jackall23 (8409 in chips) 
+Seat 3: PokerStarMan123 (9241 in chips) 
+Seat 4: Klemtonius (28170 in chips) 
+Seat 8: MaFak2019 (21743 in chips) 
+Seat 9: manon327 (11926 in chips) 
+manon327: posts small blind 50
+color_singleton: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [2c Ad]
+Jackall23: folds 
+PokerStarMan123: calls 100
+Klemtonius: calls 100
+MaFak2019: raises 300 to 400
+manon327: calls 350
+color_singleton: folds 
+PokerStarMan123: folds 
+Klemtonius: calls 300
+*** FLOP *** [8s 8d Ah]
+manon327: checks 
+Klemtonius: checks 
+MaFak2019: bets 800
+manon327: folds 
+Klemtonius: folds 
+Uncalled bet (800) returned to MaFak2019
+MaFak2019 collected 1323 from pot
+MaFak2019: doesn't show hand 
+*** SUMMARY ***
+Total pot 1400 | Rake 77 
+Board [8s 8d Ah]
+Seat 1: color_singleton (big blind) folded before Flop
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 folded before Flop
+Seat 4: Klemtonius folded on the Flop
+Seat 8: MaFak2019 (button) collected (1323)
+Seat 9: manon327 (small blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #226726517628: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:57:37 ET
+Table 'again and again' 9-max (Play Money) Seat #9 is the button
+Seat 1: color_singleton (2465 in chips) 
+Seat 2: Jackall23 (8409 in chips) 
+Seat 3: PokerStarMan123 (9141 in chips) 
+Seat 4: Klemtonius (27770 in chips) 
+Seat 8: MaFak2019 (22666 in chips) 
+Seat 9: manon327 (11526 in chips) 
+color_singleton: posts small blind 50
+Jackall23: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Ad 3c]
+PokerStarMan123: calls 100
+Klemtonius: folds 
+MaFak2019: calls 100
+manon327: calls 100
+color_singleton: calls 50
+Jackall23: checks 
+*** FLOP *** [Jh Td 7c]
+color_singleton: checks 
+Jackall23: checks 
+PokerStarMan123: checks 
+MaFak2019: checks 
+manon327: checks 
+*** TURN *** [Jh Td 7c] [9d]
+color_singleton: checks 
+Jackall23: bets 236
+PokerStarMan123: folds 
+MaFak2019: calls 236
+manon327: folds 
+color_singleton: folds 
+*** RIVER *** [Jh Td 7c 9d] [9s]
+Jackall23: checks 
+MaFak2019: checks 
+*** SHOW DOWN ***
+Jackall23: shows [Ac 6c] (a pair of Nines)
+MaFak2019: shows [2c As] (a pair of Nines)
+Jackall23 collected 460 from pot
+MaFak2019 collected 459 from pot
+*** SUMMARY ***
+Total pot 972 | Rake 53 
+Board [Jh Td 7c 9d 9s]
+Seat 1: color_singleton (small blind) folded on the Turn
+Seat 2: Jackall23 (big blind) showed [Ac 6c] and won (460) with a pair of Nines
+Seat 3: PokerStarMan123 folded on the Turn
+Seat 4: Klemtonius folded before Flop (didn't bet)
+Seat 8: MaFak2019 showed [2c As] and won (459) with a pair of Nines
+Seat 9: manon327 (button) folded on the Turn
+
+
+
+PokerStars Home Game Hand #226726552916: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 15:58:46 ET
+Table 'again and again' 9-max (Play Money) Seat #1 is the button
+Seat 1: color_singleton (2365 in chips) 
+Seat 2: Jackall23 (8533 in chips) 
+Seat 3: PokerStarMan123 (9041 in chips) 
+Seat 4: Klemtonius (27770 in chips) 
+Seat 8: MaFak2019 (22789 in chips) 
+Seat 9: manon327 (11426 in chips) 
+Jackall23: posts small blind 50
+PokerStarMan123: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Jd 4s]
+Klemtonius: calls 100
+MaFak2019: calls 100
+manon327: calls 100
+color_singleton: folds 
+Jackall23: folds 
+PokerStarMan123: checks 
+*** FLOP *** [5d Ts Kd]
+PokerStarMan123: checks 
+Klemtonius: checks 
+MaFak2019: checks 
+manon327: checks 
+*** TURN *** [5d Ts Kd] [Kc]
+PokerStarMan123: checks 
+Klemtonius: checks 
+MaFak2019: checks 
+manon327: checks 
+*** RIVER *** [5d Ts Kd Kc] [Kh]
+PokerStarMan123: checks 
+Klemtonius: checks 
+MaFak2019: checks 
+manon327: checks 
+*** SHOW DOWN ***
+PokerStarMan123: shows [Jd 4s] (three of a kind, Kings)
+Klemtonius: shows [Qh 5s] (a full house, Kings full of Fives)
+MaFak2019: mucks hand 
+manon327: mucks hand 
+Klemtonius collected 425 from pot
+*** SUMMARY ***
+Total pot 450 | Rake 25 
+Board [5d Ts Kd Kc Kh]
+Seat 1: color_singleton (button) folded before Flop (didn't bet)
+Seat 2: Jackall23 (small blind) folded before Flop
+Seat 3: PokerStarMan123 (big blind) showed [Jd 4s] and lost with three of a kind, Kings
+Seat 4: Klemtonius showed [Qh 5s] and won (425) with a full house, Kings full of Fives
+Seat 8: MaFak2019 mucked [8c 9c]
+Seat 9: manon327 mucked [Qc 8s]
+
+
+
+PokerStars Home Game Hand #226726583038: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:00:02 ET
+Table 'again and again' 9-max (Play Money) Seat #2 is the button
+Seat 1: color_singleton (2365 in chips) 
+Seat 2: Jackall23 (8483 in chips) 
+Seat 3: PokerStarMan123 (8941 in chips) 
+Seat 4: Klemtonius (28095 in chips) 
+Seat 8: MaFak2019 (22689 in chips) 
+Seat 9: manon327 (11326 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [Tc 4d]
+MaFak2019: folds 
+manon327: calls 100
+color_singleton: calls 100
+Jackall23: folds 
+PokerStarMan123: calls 50
+Klemtonius: checks 
+*** FLOP *** [Qd Qh 4s]
+PokerStarMan123: checks 
+Klemtonius: checks 
+manon327: bets 189
+color_singleton: folds 
+PokerStarMan123: calls 189
+Klemtonius: folds 
+*** TURN *** [Qd Qh 4s] [9d]
+PokerStarMan123: checks 
+manon327: bets 367
+PokerStarMan123: calls 367
+*** RIVER *** [Qd Qh 4s 9d] [As]
+PokerStarMan123: checks 
+manon327: bets 714
+PokerStarMan123: folds 
+Uncalled bet (714) returned to manon327
+manon327 collected 1429 from pot
+*** SUMMARY ***
+Total pot 1512 | Rake 83 
+Board [Qd Qh 4s 9d As]
+Seat 1: color_singleton folded on the Flop
+Seat 2: Jackall23 (button) folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (small blind) folded on the River
+Seat 4: Klemtonius (big blind) folded on the Flop
+Seat 8: MaFak2019 folded before Flop (didn't bet)
+Seat 9: manon327 collected (1429)
+
+
+
+PokerStars Home Game Hand #226726610247: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:01:06 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (2265 in chips) 
+Seat 2: Jackall23 (8483 in chips) 
+Seat 3: PokerStarMan123 (8285 in chips) 
+Seat 4: Klemtonius (27995 in chips) 
+Seat 8: MaFak2019 (22689 in chips) 
+Seat 9: manon327 (12099 in chips) 
+Klemtonius: posts small blind 50
+MaFak2019: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [3h 3c]
+manon327: calls 100
+color_singleton: folds 
+Jackall23: folds 
+PokerStarMan123: calls 100
+Klemtonius: calls 50
+MaFak2019: checks 
+*** FLOP *** [Js 9s 8s]
+Klemtonius: checks 
+MaFak2019: bets 900
+manon327: folds 
+PokerStarMan123: folds 
+Klemtonius: folds 
+Uncalled bet (900) returned to MaFak2019
+MaFak2019 collected 378 from pot
+MaFak2019: doesn't show hand 
+*** SUMMARY ***
+Total pot 400 | Rake 22 
+Board [Js 9s 8s]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (button) folded on the Flop
+Seat 4: Klemtonius (small blind) folded on the Flop
+Seat 8: MaFak2019 (big blind) collected (378)
+Seat 9: manon327 folded on the Flop
+
+
+
+PokerStars Home Game Hand #226726633031: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:02:04 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (2265 in chips) 
+Seat 2: Jackall23 (8483 in chips) 
+Seat 3: PokerStarMan123 (8185 in chips) 
+Seat 4: Klemtonius (27895 in chips) 
+Seat 8: MaFak2019 (22967 in chips) 
+Seat 9: manon327 (11999 in chips) 
+MaFak2019: posts small blind 50
+manon327: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [5s 6c]
+color_singleton: folds 
+Jackall23: folds 
+PokerStarMan123: calls 100
+Klemtonius: calls 100
+MaFak2019: calls 50
+manon327: checks 
+*** FLOP *** [Kh 9h 2d]
+MaFak2019: checks 
+manon327: checks 
+PokerStarMan123: checks 
+Klemtonius: checks 
+*** TURN *** [Kh 9h 2d] [4s]
+MaFak2019: checks 
+manon327: checks 
+PokerStarMan123: checks 
+Klemtonius: checks 
+*** RIVER *** [Kh 9h 2d 4s] [7s]
+MaFak2019: checks 
+manon327: checks 
+PokerStarMan123: bets 300
+Klemtonius: folds 
+MaFak2019: folds 
+manon327: folds 
+Uncalled bet (300) returned to PokerStarMan123
+PokerStarMan123 collected 378 from pot
+*** SUMMARY ***
+Total pot 400 | Rake 22 
+Board [Kh 9h 2d 4s 7s]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 collected (378)
+Seat 4: Klemtonius (button) folded on the River
+Seat 8: MaFak2019 (small blind) folded on the River
+Seat 9: manon327 (big blind) folded on the River
+
+
+
+PokerStars Home Game Hand #226726665558: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:03:20 ET
+Table 'again and again' 9-max (Play Money) Seat #8 is the button
+Seat 1: color_singleton (2265 in chips) 
+Seat 2: Jackall23 (8483 in chips) 
+Seat 3: PokerStarMan123 (8463 in chips) 
+Seat 4: Klemtonius (27795 in chips) 
+Seat 8: MaFak2019 (22867 in chips) 
+Seat 9: manon327 (11899 in chips) 
+manon327: posts small blind 50
+color_singleton: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [4h Qc]
+Jackall23: folds 
+PokerStarMan123: folds 
+Klemtonius: calls 100
+MaFak2019: calls 100
+manon327: folds 
+color_singleton: raises 200 to 300
+Klemtonius: folds 
+MaFak2019: folds 
+Uncalled bet (200) returned to color_singleton
+color_singleton collected 350 from pot
+color_singleton: doesn't show hand 
+*** SUMMARY ***
+Total pot 350 | Rake 0 
+Seat 1: color_singleton (big blind) collected (350)
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius folded before Flop
+Seat 8: MaFak2019 (button) folded before Flop
+Seat 9: manon327 (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #226726680855: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:03:54 ET
+Table 'again and again' 9-max (Play Money) Seat #9 is the button
+Seat 1: color_singleton (2515 in chips) 
+Seat 2: Jackall23 (8483 in chips) 
+Seat 3: PokerStarMan123 (8463 in chips) 
+Seat 4: Klemtonius (27695 in chips) 
+Seat 8: MaFak2019 (22767 in chips) 
+Seat 9: manon327 (11849 in chips) 
+color_singleton: posts small blind 50
+Jackall23: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [As Jc]
+PokerStarMan123: raises 300 to 400
+Klemtonius: calls 400
+MaFak2019: folds 
+manon327: calls 400
+color_singleton: folds 
+Jackall23: folds 
+*** FLOP *** [2c Qs Td]
+PokerStarMan123: checks 
+Klemtonius: bets 638
+manon327: folds 
+PokerStarMan123: calls 638
+*** TURN *** [2c Qs Td] [3s]
+PokerStarMan123: checks 
+Klemtonius: bets 1241
+PokerStarMan123: raises 1859 to 3100
+Klemtonius: raises 10459 to 13559
+PokerStarMan123: folds 
+Uncalled bet (10459) returned to Klemtonius
+Klemtonius collected 8341 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 8826 | Rake 485 
+Board [2c Qs Td 3s]
+Seat 1: color_singleton (small blind) folded before Flop
+Seat 2: Jackall23 (big blind) folded before Flop
+Seat 3: PokerStarMan123 folded on the Turn
+Seat 4: Klemtonius collected (8341)
+Seat 8: MaFak2019 folded before Flop (didn't bet)
+Seat 9: manon327 (button) folded on the Flop
+
+
+
+PokerStars Home Game Hand #226726710848: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:05:07 ET
+Table 'again and again' 9-max (Play Money) Seat #1 is the button
+Seat 1: color_singleton (2465 in chips) 
+Seat 2: Jackall23 (8383 in chips) 
+Seat 3: PokerStarMan123 (4325 in chips) 
+Seat 4: Klemtonius (31898 in chips) 
+Seat 8: MaFak2019 (22767 in chips) 
+Seat 9: manon327 (11449 in chips) 
+Jackall23: posts small blind 50
+PokerStarMan123: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [7s Js]
+Klemtonius: calls 100
+MaFak2019: calls 100
+manon327 has timed out
+manon327: folds 
+color_singleton: raises 300 to 400
+Jackall23: folds 
+PokerStarMan123: calls 300
+Klemtonius: calls 300
+MaFak2019: calls 300
+*** FLOP *** [Kc 9s 9c]
+PokerStarMan123: checks 
+Klemtonius: bets 1559
+MaFak2019: folds 
+color_singleton: folds 
+PokerStarMan123: folds 
+Uncalled bet (1559) returned to Klemtonius
+Klemtonius collected 1559 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1650 | Rake 91 
+Board [Kc 9s 9c]
+Seat 1: color_singleton (button) folded on the Flop
+Seat 2: Jackall23 (small blind) folded before Flop
+Seat 3: PokerStarMan123 (big blind) folded on the Flop
+Seat 4: Klemtonius collected (1559)
+Seat 8: MaFak2019 folded on the Flop
+Seat 9: manon327 folded before Flop (didn't bet)
+
+
+
+PokerStars Home Game Hand #226726735952: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:06:12 ET
+Table 'again and again' 9-max (Play Money) Seat #2 is the button
+Seat 1: color_singleton (2065 in chips) 
+Seat 2: Jackall23 (8333 in chips) 
+Seat 3: PokerStarMan123 (3925 in chips) 
+Seat 4: Klemtonius (33057 in chips) 
+Seat 8: MaFak2019 (22367 in chips) 
+Seat 9: manon327 (11449 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [5h 6d]
+MaFak2019: folds 
+manon327: calls 100
+color_singleton: folds 
+Jackall23: calls 100
+PokerStarMan123: calls 50
+Klemtonius: checks 
+*** FLOP *** [2d Th 6h]
+PokerStarMan123: checks 
+Klemtonius: checks 
+manon327: bets 189
+Jackall23: calls 189
+PokerStarMan123: calls 189
+Klemtonius: folds 
+*** TURN *** [2d Th 6h] [3c]
+PokerStarMan123: checks 
+manon327: checks 
+Jackall23: checks 
+*** RIVER *** [2d Th 6h 3c] [Ks]
+PokerStarMan123: checks 
+manon327: checks 
+Jackall23: checks 
+*** SHOW DOWN ***
+PokerStarMan123: shows [5h 6d] (a pair of Sixes)
+manon327: mucks hand 
+Jackall23: shows [Td 5d] (a pair of Tens)
+Jackall23 collected 914 from pot
+*** SUMMARY ***
+Total pot 967 | Rake 53 
+Board [2d Th 6h 3c Ks]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 (button) showed [Td 5d] and won (914) with a pair of Tens
+Seat 3: PokerStarMan123 (small blind) showed [5h 6d] and lost with a pair of Sixes
+Seat 4: Klemtonius (big blind) folded on the Flop
+Seat 8: MaFak2019 folded before Flop (didn't bet)
+Seat 9: manon327 mucked [9h Ah]
+
+
+
+PokerStars Home Game Hand #226726761369: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:07:17 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (2065 in chips) 
+Seat 2: Jackall23 (8958 in chips) 
+Seat 3: PokerStarMan123 (3636 in chips) 
+Seat 4: Klemtonius (32957 in chips) 
+Seat 8: MaFak2019 (22367 in chips) 
+Seat 9: manon327 (11160 in chips) 
+Klemtonius: posts small blind 50
+MaFak2019: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [7c Tc]
+manon327: calls 100
+color_singleton: calls 100
+Jackall23: calls 100
+PokerStarMan123: calls 100
+Klemtonius: raises 200 to 300
+MaFak2019: raises 300 to 600
+manon327: calls 500
+color_singleton: folds 
+Jackall23: calls 500
+PokerStarMan123: folds 
+Klemtonius: calls 300
+*** FLOP *** [Ks Ac 7h]
+Klemtonius: checks 
+MaFak2019: bets 1200
+manon327: calls 1200
+Jackall23: folds 
+Klemtonius: folds 
+*** TURN *** [Ks Ac 7h] [As]
+MaFak2019: checks 
+manon327: checks 
+*** RIVER *** [Ks Ac 7h As] [6d]
+MaFak2019: checks 
+manon327: bets 4725
+MaFak2019: folds 
+Uncalled bet (4725) returned to manon327
+manon327 collected 4725 from pot
+*** SUMMARY ***
+Total pot 5000 | Rake 275 
+Board [Ks Ac 7h As 6d]
+Seat 1: color_singleton folded before Flop
+Seat 2: Jackall23 folded on the Flop
+Seat 3: PokerStarMan123 (button) folded before Flop
+Seat 4: Klemtonius (small blind) folded on the Flop
+Seat 8: MaFak2019 (big blind) folded on the River
+Seat 9: manon327 collected (4725)
+
+
+
+PokerStars Home Game Hand #226726803056: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:08:53 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (1965 in chips) 
+Seat 2: Jackall23 (8358 in chips) 
+Seat 3: PokerStarMan123 (3536 in chips) 
+Seat 4: Klemtonius (32357 in chips) 
+Seat 8: MaFak2019 (20567 in chips) 
+Seat 9: manon327 (14085 in chips) 
+MaFak2019: posts small blind 50
+manon327: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [3h 9c]
+color_singleton: folds 
+Jackall23: calls 100
+PokerStarMan123: folds 
+Klemtonius: raises 100 to 200
+MaFak2019: calls 150
+manon327: calls 100
+Jackall23: calls 100
+*** FLOP *** [6h 2d 9d]
+MaFak2019: checks 
+manon327: checks 
+Jackall23: bets 100
+Klemtonius: raises 100 to 200
+MaFak2019: folds 
+manon327: folds 
+Jackall23: calls 100
+*** TURN *** [6h 2d 9d] [Th]
+Jackall23: checks 
+Klemtonius: bets 1134
+Jackall23: folds 
+Uncalled bet (1134) returned to Klemtonius
+Klemtonius collected 1134 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1200 | Rake 66 
+Board [6h 2d 9d Th]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 folded on the Turn
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius (button) collected (1134)
+Seat 8: MaFak2019 (small blind) folded on the Flop
+Seat 9: manon327 (big blind) folded on the Flop
+
+
+
+PokerStars Home Game Hand #226726825631: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:09:54 ET
+Table 'again and again' 9-max (Play Money) Seat #8 is the button
+Seat 1: color_singleton (1965 in chips) 
+Seat 2: Jackall23 (7958 in chips) 
+Seat 3: PokerStarMan123 (3536 in chips) 
+Seat 4: Klemtonius (33091 in chips) 
+Seat 8: MaFak2019 (20367 in chips) 
+Seat 9: manon327 (13885 in chips) 
+manon327: posts small blind 50
+color_singleton: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [8s Ah]
+Jackall23: folds 
+PokerStarMan123: raises 300 to 400
+Klemtonius: calls 400
+MaFak2019: folds 
+manon327: folds 
+color_singleton: calls 300
+*** FLOP *** [Kd 5d 6h]
+color_singleton: checks 
+PokerStarMan123: checks 
+Klemtonius: bets 1181
+color_singleton: folds 
+PokerStarMan123: folds 
+Uncalled bet (1181) returned to Klemtonius
+Klemtonius collected 1181 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1250 | Rake 69 
+Board [Kd 5d 6h]
+Seat 1: color_singleton (big blind) folded on the Flop
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 folded on the Flop
+Seat 4: Klemtonius collected (1181)
+Seat 8: MaFak2019 (button) folded before Flop (didn't bet)
+Seat 9: manon327 (small blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #226726842228: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:10:32 ET
+Table 'again and again' 9-max (Play Money) Seat #9 is the button
+Seat 1: color_singleton (1565 in chips) 
+Seat 2: Jackall23 (7958 in chips) 
+Seat 3: PokerStarMan123 (3136 in chips) 
+Seat 4: Klemtonius (33872 in chips) 
+Seat 8: MaFak2019 (20367 in chips) 
+Seat 9: manon327 (13835 in chips) 
+color_singleton: posts small blind 50
+Jackall23: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [9s 2h]
+PokerStarMan123: folds 
+Klemtonius: calls 100
+MaFak2019: calls 100
+manon327: calls 100
+color_singleton: raises 400 to 500
+Jackall23: folds 
+Klemtonius: folds 
+MaFak2019: calls 400
+manon327: calls 400
+*** FLOP *** [4h 7h 3c]
+color_singleton: bets 1065 and is all-in
+MaFak2019: calls 1065
+manon327: calls 1065
+*** TURN *** [4h 7h 3c] [Qc]
+MaFak2019: checks 
+manon327: checks 
+*** RIVER *** [4h 7h 3c Qc] [Tc]
+MaFak2019: checks 
+manon327: checks 
+*** SHOW DOWN ***
+color_singleton: shows [Ad Jc] (high card Ace)
+MaFak2019: shows [Qd 5s] (a pair of Queens)
+manon327: mucks hand 
+MaFak2019 collected 4626 from pot
+*** SUMMARY ***
+Total pot 4895 | Rake 269 
+Board [4h 7h 3c Qc Tc]
+Seat 1: color_singleton (small blind) showed [Ad Jc] and lost with high card Ace
+Seat 2: Jackall23 (big blind) folded before Flop
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius folded before Flop
+Seat 8: MaFak2019 showed [Qd 5s] and won (4626) with a pair of Queens
+Seat 9: manon327 (button) mucked [6h 9h]
+
+
+
+PokerStars Home Game Hand #226726860792: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:11:21 ET
+Table 'again and again' 9-max (Play Money) Seat #2 is the button
+Seat 2: Jackall23 (7858 in chips) 
+Seat 3: PokerStarMan123 (3136 in chips) 
+Seat 4: Klemtonius (33772 in chips) 
+Seat 8: MaFak2019 (23428 in chips) 
+Seat 9: manon327 (12270 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [3c Ah]
+MaFak2019: calls 100
+manon327: calls 100
+Jackall23: folds 
+PokerStarMan123: calls 50
+Klemtonius: checks 
+*** FLOP *** [Td 4s Kd]
+PokerStarMan123: checks 
+Klemtonius: bets 189
+MaFak2019: calls 189
+manon327: calls 189
+PokerStarMan123: folds 
+*** TURN *** [Td 4s Kd] [4d]
+Klemtonius: checks 
+MaFak2019: checks 
+manon327: bets 457
+Klemtonius: calls 457
+MaFak2019: folds 
+*** RIVER *** [Td 4s Kd 4d] [7h]
+Klemtonius: checks 
+manon327: bets 889
+Klemtonius: folds 
+Uncalled bet (889) returned to manon327
+manon327 collected 1778 from pot
+*** SUMMARY ***
+Total pot 1881 | Rake 103 
+Board [Td 4s Kd 4d 7h]
+Seat 2: Jackall23 (button) folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (small blind) folded on the Flop
+Seat 4: Klemtonius (big blind) folded on the River
+Seat 8: MaFak2019 folded on the Turn
+Seat 9: manon327 collected (1778)
+
+
+
+PokerStars Home Game Hand #226726889148: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:12:29 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (10000 in chips) 
+Seat 2: Jackall23 (7858 in chips) 
+Seat 3: PokerStarMan123 (3036 in chips) 
+Seat 4: Klemtonius (33026 in chips) 
+Seat 8: MaFak2019 (23139 in chips) 
+Seat 9: manon327 (13302 in chips) 
+Klemtonius: posts small blind 50
+MaFak2019: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [6s 8h]
+manon327: calls 100
+color_singleton: calls 100
+Jackall23: folds 
+PokerStarMan123: folds 
+Klemtonius: raises 400 to 500
+MaFak2019: calls 400
+manon327: folds 
+color_singleton: calls 400
+*** FLOP *** [7d 5c Ts]
+Klemtonius: bets 756
+MaFak2019: folds 
+color_singleton: calls 756
+*** TURN *** [7d 5c Ts] [7c]
+Klemtonius: checks 
+color_singleton: checks 
+*** RIVER *** [7d 5c Ts 7c] [6d]
+Klemtonius: bets 1470
+color_singleton: folds 
+Uncalled bet (1470) returned to Klemtonius
+Klemtonius collected 2941 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 3112 | Rake 171 
+Board [7d 5c Ts 7c 6d]
+Seat 1: color_singleton folded on the River
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (button) folded before Flop (didn't bet)
+Seat 4: Klemtonius (small blind) collected (2941)
+Seat 8: MaFak2019 (big blind) folded on the Flop
+Seat 9: manon327 folded before Flop
+
+
+
+PokerStars Home Game Hand #226726915691: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:13:39 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (8744 in chips) 
+Seat 2: Jackall23 (7858 in chips) 
+Seat 3: PokerStarMan123 (3036 in chips) 
+Seat 4: Klemtonius (34711 in chips) 
+Seat 8: MaFak2019 (22639 in chips) 
+Seat 9: manon327 (13202 in chips) 
+MaFak2019: posts small blind 50
+manon327: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [9h Ah]
+color_singleton: folds 
+Jackall23: folds 
+PokerStarMan123: raises 300 to 400
+Klemtonius: calls 400
+MaFak2019: calls 350
+manon327: folds 
+*** FLOP *** [2s Td 3c]
+MaFak2019: checks 
+PokerStarMan123: checks 
+Klemtonius: checks 
+*** TURN *** [2s Td 3c] [4s]
+MaFak2019: bets 800
+PokerStarMan123: folds 
+Klemtonius: folds 
+Uncalled bet (800) returned to MaFak2019
+MaFak2019 collected 1228 from pot
+MaFak2019: doesn't show hand 
+*** SUMMARY ***
+Total pot 1300 | Rake 72 
+Board [2s Td 3c 4s]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 folded on the Turn
+Seat 4: Klemtonius (button) folded on the Turn
+Seat 8: MaFak2019 (small blind) collected (1228)
+Seat 9: manon327 (big blind) folded before Flop
+
+
+
+PokerStars Home Game Hand #226726934344: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:14:26 ET
+Table 'again and again' 9-max (Play Money) Seat #8 is the button
+Seat 1: color_singleton (8744 in chips) 
+Seat 2: Jackall23 (7858 in chips) 
+Seat 3: PokerStarMan123 (2636 in chips) 
+Seat 4: Klemtonius (34311 in chips) 
+Seat 8: MaFak2019 (23467 in chips) 
+Seat 9: manon327 (13102 in chips) 
+manon327: posts small blind 50
+color_singleton: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [6s 6c]
+Jackall23: calls 100
+PokerStarMan123: raises 300 to 400
+Klemtonius: folds 
+MaFak2019: folds 
+manon327: calls 350
+color_singleton: calls 300
+Jackall23: folds 
+*** FLOP *** [9s 7d Js]
+manon327: bets 614
+color_singleton: folds 
+PokerStarMan123: folds 
+Uncalled bet (614) returned to manon327
+manon327 collected 1228 from pot
+*** SUMMARY ***
+Total pot 1300 | Rake 72 
+Board [9s 7d Js]
+Seat 1: color_singleton (big blind) folded on the Flop
+Seat 2: Jackall23 folded before Flop
+Seat 3: PokerStarMan123 folded on the Flop
+Seat 4: Klemtonius folded before Flop (didn't bet)
+Seat 8: MaFak2019 (button) folded before Flop (didn't bet)
+Seat 9: manon327 (small blind) collected (1228)
+
+
+
+PokerStars Home Game Hand #226726951871: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:15:00 ET
+Table 'again and again' 9-max (Play Money) Seat #9 is the button
+Seat 1: color_singleton (8344 in chips) 
+Seat 2: Jackall23 (7758 in chips) 
+Seat 3: PokerStarMan123 (2236 in chips) 
+Seat 4: Klemtonius (34311 in chips) 
+Seat 8: MaFak2019 (23467 in chips) 
+Seat 9: manon327 (13930 in chips) 
+color_singleton: posts small blind 50
+Jackall23: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [5h 9s]
+PokerStarMan123: folds 
+Klemtonius: calls 100
+MaFak2019: calls 100
+manon327: calls 100
+color_singleton: calls 50
+Jackall23: checks 
+*** FLOP *** [As 6d 7d]
+color_singleton: checks 
+Jackall23: checks 
+Klemtonius: checks 
+MaFak2019: checks 
+manon327: bets 236
+color_singleton: folds 
+Jackall23: folds 
+Klemtonius: folds 
+MaFak2019: calls 236
+*** TURN *** [As 6d 7d] [3d]
+MaFak2019: bets 500
+manon327: calls 500
+*** RIVER *** [As 6d 7d 3d] [7s]
+MaFak2019: bets 2200
+manon327: folds 
+Uncalled bet (2200) returned to MaFak2019
+MaFak2019 collected 1864 from pot
+MaFak2019: doesn't show hand 
+*** SUMMARY ***
+Total pot 1972 | Rake 108 
+Board [As 6d 7d 3d 7s]
+Seat 1: color_singleton (small blind) folded on the Flop
+Seat 2: Jackall23 (big blind) folded on the Flop
+Seat 3: PokerStarMan123 folded before Flop (didn't bet)
+Seat 4: Klemtonius folded on the Flop
+Seat 8: MaFak2019 collected (1864)
+Seat 9: manon327 (button) folded on the River
+
+
+
+PokerStars Home Game Hand #226727010369: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:16:14 ET
+Table 'again and again' 9-max (Play Money) Seat #1 is the button
+Seat 1: color_singleton (8244 in chips) 
+Seat 2: Jackall23 (7658 in chips) 
+Seat 3: PokerStarMan123 (2236 in chips) 
+Seat 4: Klemtonius (34211 in chips) 
+Seat 8: MaFak2019 (24495 in chips) 
+Seat 9: manon327 (13094 in chips) 
+Jackall23: posts small blind 50
+PokerStarMan123: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [3c 7s]
+Klemtonius: calls 100
+MaFak2019: calls 100
+manon327: calls 100
+color_singleton: folds 
+Jackall23: calls 50
+PokerStarMan123: checks 
+*** FLOP *** [9h 7d Js]
+Jackall23: checks 
+PokerStarMan123: checks 
+Klemtonius: bets 472
+MaFak2019: folds 
+manon327: calls 472
+Jackall23: folds 
+PokerStarMan123: folds 
+*** TURN *** [9h 7d Js] [5h]
+Klemtonius: bets 1365
+manon327: folds 
+Uncalled bet (1365) returned to Klemtonius
+Klemtonius collected 1365 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 1444 | Rake 79 
+Board [9h 7d Js 5h]
+Seat 1: color_singleton (button) folded before Flop (didn't bet)
+Seat 2: Jackall23 (small blind) folded on the Flop
+Seat 3: PokerStarMan123 (big blind) folded on the Flop
+Seat 4: Klemtonius collected (1365)
+Seat 8: MaFak2019 folded on the Flop
+Seat 9: manon327 folded on the Turn
+
+
+
+PokerStars Home Game Hand #226727055456: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:17:08 ET
+Table 'again and again' 9-max (Play Money) Seat #2 is the button
+Seat 1: color_singleton (8244 in chips) 
+Seat 2: Jackall23 (7558 in chips) 
+Seat 3: PokerStarMan123 (2136 in chips) 
+Seat 4: Klemtonius (35004 in chips) 
+Seat 8: MaFak2019 (24395 in chips) 
+Seat 9: manon327 (12522 in chips) 
+PokerStarMan123: posts small blind 50
+Klemtonius: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [3c 5d]
+MaFak2019: calls 100
+manon327: calls 100
+color_singleton: folds 
+Jackall23: calls 100
+PokerStarMan123: calls 50
+Klemtonius: raises 500 to 600
+MaFak2019: calls 500
+manon327: calls 500
+Jackall23: folds 
+PokerStarMan123: folds 
+*** FLOP *** [5c Kc 9c]
+Klemtonius: bets 1890
+MaFak2019: folds 
+manon327: folds 
+Uncalled bet (1890) returned to Klemtonius
+Klemtonius collected 1890 from pot
+Klemtonius: doesn't show hand 
+*** SUMMARY ***
+Total pot 2000 | Rake 110 
+Board [5c Kc 9c]
+Seat 1: color_singleton folded before Flop (didn't bet)
+Seat 2: Jackall23 (button) folded before Flop
+Seat 3: PokerStarMan123 (small blind) folded before Flop
+Seat 4: Klemtonius (big blind) collected (1890)
+Seat 8: MaFak2019 folded on the Flop
+Seat 9: manon327 folded on the Flop
+
+
+
+PokerStars Home Game Hand #226727094001: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:17:55 ET
+Table 'again and again' 9-max (Play Money) Seat #3 is the button
+Seat 1: color_singleton (8244 in chips) 
+Seat 2: Jackall23 (7458 in chips) 
+Seat 3: PokerStarMan123 (2036 in chips) 
+Seat 4: Klemtonius (36294 in chips) 
+Seat 8: MaFak2019 (23795 in chips) 
+Seat 9: manon327 (11922 in chips) 
+Klemtonius: posts small blind 50
+MaFak2019: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [3h 5c]
+manon327: calls 100
+color_singleton: calls 100
+Jackall23: folds 
+PokerStarMan123: folds 
+Klemtonius: raises 100 to 200
+MaFak2019: raises 200 to 400
+manon327: calls 300
+color_singleton: calls 300
+Klemtonius: calls 200
+*** FLOP *** [4s 4c Kh]
+Klemtonius: bets 756
+MaFak2019: raises 756 to 1512
+manon327: folds 
+color_singleton: folds 
+Klemtonius: raises 756 to 2268
+MaFak2019: calls 756
+*** TURN *** [4s 4c Kh] [8c]
+Klemtonius: bets 26600
+MaFak2019: calls 21127 and is all-in
+Uncalled bet (5473) returned to Klemtonius
+*** RIVER *** [4s 4c Kh 8c] [9c]
+*** SHOW DOWN ***
+Klemtonius: shows [Qh 4h] (three of a kind, Fours)
+MaFak2019: shows [Kc Jc] (a flush, King high)
+MaFak2019 collected 45729 from pot
+*** SUMMARY ***
+Total pot 48390 | Rake 2661 
+Board [4s 4c Kh 8c 9c]
+Seat 1: color_singleton folded on the Flop
+Seat 2: Jackall23 folded before Flop (didn't bet)
+Seat 3: PokerStarMan123 (button) folded before Flop (didn't bet)
+Seat 4: Klemtonius (small blind) showed [Qh 4h] and lost with three of a kind, Fours
+Seat 8: MaFak2019 (big blind) showed [Kc Jc] and won (45729) with a flush, King high
+Seat 9: manon327 folded on the Flop
+
+
+
+PokerStars Home Game Hand #226727155812: {DaPokaStars}  Hold'em No Limit (50/100) - 2021/05/13 16:19:16 ET
+Table 'again and again' 9-max (Play Money) Seat #4 is the button
+Seat 1: color_singleton (7844 in chips) 
+Seat 2: Jackall23 (7458 in chips) 
+Seat 3: PokerStarMan123 (2036 in chips) 
+Seat 4: Klemtonius (12499 in chips) 
+Seat 8: MaFak2019 (45729 in chips) 
+Seat 9: manon327 (11522 in chips) 
+MaFak2019: posts small blind 50
+manon327: posts big blind 100
+*** HOLE CARDS ***
+Dealt to PokerStarMan123 [7d 8d]
+color_singleton: calls 100
+Jackall23: raises 100 to 200
+PokerStarMan123: calls 200
+Klemtonius: raises 100 to 300
+MaFak2019: calls 250
+manon327: calls 200
+color_singleton: calls 200
+Jackall23: calls 100
+PokerStarMan123: calls 100
+*** FLOP *** [9c Kd Qd]
+MaFak2019: checks 
+manon327: bets 850
+color_singleton: folds 
+Jackall23: folds 
+PokerStarMan123: raises 886 to 1736 and is all-in
+Klemtonius: folds 
+MaFak2019: folds 
+manon327: calls 886
+*** TURN *** [9c Kd Qd] [Ah]
+*** RIVER *** [9c Kd Qd Ah] [9h]
+*** SHOW DOWN ***
+manon327: shows [Ts Jd] (a straight, Ten to Ace)
+PokerStarMan123: shows [7d 8d] (a pair of Nines)
+manon327 collected 4982 from pot
+*** SUMMARY ***
+Total pot 5272 | Rake 290 
+Board [9c Kd Qd Ah 9h]
+Seat 1: color_singleton folded on the Flop
+Seat 2: Jackall23 folded on the Flop
+Seat 3: PokerStarMan123 showed [7d 8d] and lost with a pair of Nines
+Seat 4: Klemtonius (button) folded on the Flop
+Seat 8: MaFak2019 (small blind) folded on the Flop
+Seat 9: manon327 (big blind) showed [Ts Jd] and won (4982) with a straight, Ten to Ace
+
+
+
