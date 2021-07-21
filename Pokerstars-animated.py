@@ -534,7 +534,7 @@ filename = paths[-1]
 path_image_save = create_dir(
     'C:\\Users\\Michl\\Documents\\GitHub\\pokerstars_reader\\poker_session\\stats\\')
 path_creds = create_dir(
-    "C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\creds\\") + "creds.json"
+    "C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\private_keys\\pokerstars\\") + "creds.json"
 path_email = create_dir(
     "C:\\Users\\Michl\\Documents\\GitHub\\private_projects\\pokerstars\\email_list\\") + "email-list.csv"
 # Some basic parameters
