@@ -20,8 +20,6 @@ from pathlib import Path
 
 # TODO: check for whether homegame, if homegame we wanna evauluate money
 # TODO: add preflop raises
-# TODO: add family pot percentage (counter)
-# TODO: Clean up the code
 # ? Possible to implement add rebuys of known players when they change accounts to buy in again
 
 # * Functions
@@ -525,7 +523,7 @@ def save_session(
         for rows in reader:
             t_email_list = [rows for rows in reader]
     email_message = (
-        f"[automatically created email]\n\nHey guys,\n\nI just updated the excel sheet (https://docs.google.com/spreadsheets/d/1gkXoTGLdAhK8Tqx-yD8Mj2YO2dYev7WBXVQNRhh4EfM/edit?usp=sharing)!\n"
+        f"[automatically created email]\n\nHey guys,\n\nI just updated the excel sheet !\n"
         + f"I've attached the statistic overview picture to this email and see below for a short summary. As usual, lemme know if something is incorrect.\n\n"
         + f"See you next time!\nMichel\n\n\nSummary ({max(f_counts[0])} hands played with {sum(f_counts[6])} family pots)\n\n(name : buyins / chip count)\n"
     )
